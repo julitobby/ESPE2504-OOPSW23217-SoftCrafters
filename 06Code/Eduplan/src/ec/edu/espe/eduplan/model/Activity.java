@@ -40,7 +40,7 @@ public class Activity {
     
     public void calculateEndTime(int estimatedDurationMinutes) {
         if (startTime == null) {
-            throw new IllegalStateException("Start time must be set before calculating end time.");
+            throw new IllegalStateException("Primero Ingresa la hora de inicio de la actividad:");
         }
         this.endTime = startTime.plusMinutes(estimatedDurationMinutes);
     }
