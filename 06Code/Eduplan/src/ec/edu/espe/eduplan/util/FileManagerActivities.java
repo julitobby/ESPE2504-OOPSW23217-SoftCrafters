@@ -18,12 +18,12 @@ public class FileManagerActivities {
 
     //Attributes
 
-    private static final String activitiesFileName  = "ListOfAvailableActivities.csv";
+    private static final String ACTIVITIES_FILE_NAME  = "src/ec/edu/espe/eduplan/files/ListOfAvailableActivities.csv";
 
     //Methods
 
     public void saveActivityToCSV(Activity activity) {
-        try (FileWriter writer = new FileWriter(activitiesFileName , true)) {
+        try (FileWriter writer = new FileWriter(ACTIVITIES_FILE_NAME , true)) {
             writer.write(activity.toString() + "\n");
             System.out.println("Actividad guardada con exito.");
         } catch (IOException e) {
@@ -32,11 +32,11 @@ public class FileManagerActivities {
     }
 
     public Activity getActivityByRow(int rowIndex) {
-        try (BufferedReader br = new BufferedReader(new FileReader(activitiesFileName))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(ACTIVITIES_FILE_NAME))) {
             String row;
             int currentIndex = 1;
 
-            while ((row = br.readLine()) != null) {
+            while ((row = reader.readLine()) != null) {
                 if (currentIndex == rowIndex) {
                     String[] parts = row.split(";");
                     if (parts.length >= 9) {
@@ -71,7 +71,7 @@ public class FileManagerActivities {
 
             System.err.println("No se encontró la Actividad: " + rowIndex);
         } catch (IOException e) {
-            System.err.println("Error leyendo el archivo, try again");
+            System.err.println("Error leyendo el archivo, intenta nuevamente");
         }
         return null;
     }

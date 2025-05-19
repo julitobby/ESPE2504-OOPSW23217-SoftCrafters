@@ -3,14 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/User.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Teacher.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/controller/PrincipalController.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Activity.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Calendar.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/files/ListMethodologicalStrategies.csv</file>
             <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Plan.java</file>
             <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Reminder.java</file>
+            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/util/FileManagerActivities.java</file>
+            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/util/FileManagerUsers.java</file>
+            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/User.java</file>
         </group>
     </open-files>
 </project-private>
