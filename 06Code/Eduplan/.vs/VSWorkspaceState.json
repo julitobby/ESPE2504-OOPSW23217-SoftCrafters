@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\build",
+    "\\build\\classes",
+    "\\build\\classes\\ec",
+    "\\build\\classes\\ec\\edu",
+    "\\build\\classes\\ec\\edu\\espe",
+    "\\build\\classes\\ec\\edu\\espe\\eduplan",
+    "\\build\\classes\\ec\\edu\\espe\\eduplan\\model",
+    "\\build\\classes\\ec\\edu\\espe\\eduplan\\util",
+    "\\build\\classes\\ec\\edu\\espe\\eduplan\\view"
+  ],
+  "SelectedNode": "\\build\\classes\\ec\\edu\\espe\\eduplan\\model\\User.class",
+  "PreviewInSolutionExplorer": false
+}
