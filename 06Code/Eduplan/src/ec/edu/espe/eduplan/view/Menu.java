@@ -83,8 +83,7 @@ public class Menu {
         System.out.println("Inicio de sesion exitoso. Bienvenido, " + user.getUsername() + "!");
         return user;
     }
-    
-    
+       
     
     //Registration menu
     public User showRegistrationMenu(){
