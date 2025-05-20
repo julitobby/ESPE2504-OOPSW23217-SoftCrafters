@@ -1,5 +1,7 @@
 package ec.edu.espe.eduplan.view;
 
+import ec.edu.espe.eduplan.controller.PrincipalController;
+import ec.edu.espe.eduplan.controller.TeacherController;
 import ec.edu.espe.eduplan.model.User;
 
 /**
@@ -21,10 +23,10 @@ public class EduPlanSystem {
                     if (userLogin != null) {
                         switch (userLogin.getRol()) {
                             case "Director":
-                                // Aquí va el menú para director
+                                PrincipalController.showPrincipalMenu(userLogin);
                                 break;
                             case "Maestro":
-                                // Aquí va el menú para maestro
+                                TeacherController.showTeacherMenu(userLogin);
                                 break;
                         }
                     }
@@ -35,10 +37,10 @@ public class EduPlanSystem {
                     if (userRegister != null) {
                         switch (userRegister.getRol()) {
                             case "Director":
-                                // Aquí va el menú para director
+                                PrincipalController.showPrincipalMenu(userRegister);
                                 break;
                             case "Maestro":
-                                // Aquí va el menú para maestro
+                                TeacherController.showTeacherMenu(userRegister);
                                 break;
                         }
                     }

@@ -26,6 +26,8 @@ public class FileManagerUsers {
             
     //Methods
     
+    // String que se guardara en archivo -->  username;password;rol;firstNameTeacher;lastNameTeacher;idTeacher
+    
     public void saveTeacherToCSV(Teacher teacher) {
         try (FileWriter writer = new FileWriter(USERS_FILE_NAME , true)) {
             writer.write(teacher.toString() + "\n");
@@ -67,5 +69,6 @@ public class FileManagerUsers {
         
         return null;
     }
+    
     
 }
