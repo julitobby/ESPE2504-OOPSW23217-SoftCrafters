@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class Menu {
     
     Scanner scanner = new Scanner(System.in);
-    FileManagerUsers fileManagerUser = new FileManagerUsers();
     //Initial Menu
     public int showUserMenu() {
         System.out.println("""
@@ -63,7 +62,7 @@ public class Menu {
                 System.out.print("Ingresa tu contrasena: ");
                 String password = scanner.nextLine();
                 
-                user = fileManagerUser.getUserbyUsername(username, password);
+                user = FileManagerUsers.getUserbyUsername(username, password);
                 
                 if (user == null) {
                     attempts++;
@@ -124,10 +123,10 @@ public class Menu {
                 user = new User(username, password, rol);
                 if (user.getRol().equals("Director")){
                     Principal principal = showDataPrincipalMenu(user);
-                    fileManagerUser.savePrincipalToCSV(principal);
+                    FileManagerUsers.savePrincipalToCSV(principal);
                 }else if (user.getRol().equals("Maestro")){
                     Teacher teacher = showDataTeacherMenu(user);
-                    fileManagerUser.saveTeacherToCSV(teacher);
+                    FileManagerUsers.saveTeacherToCSV(teacher);
                 }
                 System.out.println("Usuario registrado exitosamente como " + rol + "!");
                 System.out.println("Dirigiendo a menu correspondiente...");

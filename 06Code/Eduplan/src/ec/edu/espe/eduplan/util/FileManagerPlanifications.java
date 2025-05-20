@@ -24,7 +24,14 @@ public class FileManagerPlanifications {
     
     //Methods
     
-    public void saveActivityToCSV(Planification planification) {
+        /**
+         * Los datos se guardan con el siguiente formato
+         * idPlanification;educationalLevel;activityName;ageGroup;numberOfChildren;estimatedTime;date;experienceOverview;integratingElement;transverseAxis;responsibleTeacher;scopeName/skill/initialActivities,listOfStrategies/resourcesAndMaterials(Array que se guarda con "," como separador)/assessmentIndicators(Array que se guarda con "," como separador)
+         * ESTAR ATENTO AL DATO DATE POR POSIBLES ERRORES
+         * @param planification 
+         */
+    
+    public void savePlanificationToCSV(Planification planification) {
         try (FileWriter writer = new FileWriter(PLANIFICATIONS_FILE_NAME , true)) {
             writer.write(planification.toString() + "\n");
             System.out.println("Actividad guardada con exito.");
@@ -33,7 +40,7 @@ public class FileManagerPlanifications {
         }
     }
     
-    public Planification getActivityByRow(int rowIndex) {
+    public Planification getPlanificationbyRow(int rowIndex) {
     try (BufferedReader reader = new BufferedReader(new FileReader(PLANIFICATIONS_FILE_NAME))) {
         String row;
         int currentIndex = 1;
@@ -112,7 +119,7 @@ public class FileManagerPlanifications {
     return null;
 }
 
-    public Planification getActivityById(String idPlanification) {
+    public Planification getPlanificationById(String idPlanification) {
     try (BufferedReader reader = new BufferedReader(new FileReader(PLANIFICATIONS_FILE_NAME))) {
         String row;
 

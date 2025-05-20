@@ -18,17 +18,12 @@ public class FileManagerUsers {
     //Attributes
     
     private static final String USERS_FILE_NAME  = "src/ec/edu/espe/eduplan/files/ListOfRegisteredUsers.csv";
-    
-    //Contructor
-
-    public FileManagerUsers() {
-    }
-            
+  
     //Methods
     
-    // String que se guardara en archivo -->  username;password;rol;firstNameTeacher;lastNameTeacher;idTeacher
+        // String que se guardara en archivo -->  username;password;rol;firstNameTeacher;lastNameTeacher;idTeacher
     
-    public void saveTeacherToCSV(Teacher teacher) {
+    public static void saveTeacherToCSV(Teacher teacher) {
         try (FileWriter writer = new FileWriter(USERS_FILE_NAME , true)) {
             writer.write(teacher.toString() + "\n");
             System.out.println("Datos personales del maestro registrados existosamente!");
@@ -37,7 +32,7 @@ public class FileManagerUsers {
         }
     }
     
-    public void savePrincipalToCSV(Principal principal) {
+    public static void savePrincipalToCSV(Principal principal) {
         try (FileWriter writer = new FileWriter(USERS_FILE_NAME , true)) {
             writer.write(principal.toString() + "\n");
             System.out.println("Datos personales del director registrados existosamente!");
@@ -46,7 +41,7 @@ public class FileManagerUsers {
         }
     }
     
-    public User getUserbyUsername(String usernameToFind, String passwordToFind){
+    public static User getUserbyUsername(String usernameToFind, String passwordToFind){
         try (BufferedReader reader = new BufferedReader(new FileReader(USERS_FILE_NAME))) {
             String row;
             
@@ -70,5 +65,55 @@ public class FileManagerUsers {
         return null;
     }
     
+    public static Teacher getTeacherByUsername(String usernameToFind, String passwordToFind) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(USERS_FILE_NAME))) {
+            String row;
+            while ((row = reader.readLine()) != null) {
+                String[] data = row.split(";");
+                if (data.length == 6) {
+                    String username = data[0];
+                    String password = data[1];
+                    String rol = data[2];
+                    String firstName = data[3];
+                    String lastName = data[4];
+                    String id = data[5];
+                    
+                    if (username.equals(usernameToFind) && password.equals(passwordToFind) && rol.equals("Maestro")) {
+                        User user = new User(username, password, rol);
+                        return new Teacher(user, firstName, lastName, id);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error leyendo el archivo de usuarios.");
+        }
+        return null;
+    }
+    
+    public static Principal getPrincipalByUsername(String usernameToFind, String passwordToFind) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(USERS_FILE_NAME))) {
+        String row;
+        while ((row = reader.readLine()) != null) {
+            String[] data = row.split(";");
+            if (data.length == 6) {
+                String username = data[0];
+                String password = data[1];
+                String rol = data[2];
+                String firstName = data[3];
+                String lastName = data[4];
+                String id = data[5];
+
+                if (username.equals(usernameToFind) && password.equals(passwordToFind) && rol.equals("Director")) {
+                    User user = new User(username, password, rol);
+                    return new Principal(user, firstName, lastName, id);
+                }
+            }
+        }
+    } catch (IOException e) {
+        System.err.println("Error leyendo el archivo de usuarios.");
+    }
+    return null;
+}
+
     
 }

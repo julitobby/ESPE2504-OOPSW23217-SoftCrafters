@@ -54,7 +54,7 @@ public class Planification {
     
     @Override
     public String toString() {
-        return idPlanification + educationalLevel + ";" + activityName + ";" + ageGroup + ";" + numberOfChildren + ";" + estimatedTime + ";" + date + ";" + experienceOverview + ";" + integratingElement + ";" + transverseAxis + ";" + responsibleTeacher + ";" + scopes.toString();
+        return idPlanification +";"+ educationalLevel + ";" + activityName + ";" + ageGroup + ";" + numberOfChildren + ";" + estimatedTime + ";" + date + ";" + experienceOverview + ";" + integratingElement + ";" + transverseAxis + ";" + responsibleTeacher + ";" + scopes.toString();
     }
     
     public String getIdPlanification() {
