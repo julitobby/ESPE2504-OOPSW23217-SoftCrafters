@@ -104,15 +104,4 @@ public class Menu {
         }
         return user;
     }
-    
-    
-    //Teacher Menu
-    public void showTeacherMenu(User user){
-        
-    }
-    
-    //Principal Menu
-    public void showPrincipalMenu(User user){
-        
-    }
 }
