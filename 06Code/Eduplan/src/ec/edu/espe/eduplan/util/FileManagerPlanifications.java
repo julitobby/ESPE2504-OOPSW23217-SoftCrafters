@@ -14,17 +14,17 @@ import java.util.Arrays;
  * @author SoftCrafters
  */
 
-public class FileManagerActivities {
+public class FileManagerPlanifications {
 
     //Attributes
 
-    private static final String ACTIVITIES_FILE_NAME  = "src/ec/edu/espe/eduplan/files/ListOfAvailableActivities.csv";
+    private static final String     PLANIFICATIONS_FILE_NAME  = "src/ec/edu/espe/eduplan/files/ListOfPlanifications.csv";
 
     //Methods
 
-    public void saveActivityToCSV(Planification activity) {
-        try (FileWriter writer = new FileWriter(ACTIVITIES_FILE_NAME , true)) {
-            writer.write(activity.toString() + "\n");
+    public void saveActivityToCSV(Planification planification) {
+        try (FileWriter writer = new FileWriter(PLANIFICATIONS_FILE_NAME , true)) {
+            writer.write(planification.toString() + "\n");
             System.out.println("Actividad guardada con exito.");
         } catch (IOException e) {
             System.err.println("Error al guardar la actividad, intenta nuevamente.");
@@ -32,7 +32,7 @@ public class FileManagerActivities {
     }
 
     public Planification getActivityByRow(int rowIndex) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(ACTIVITIES_FILE_NAME))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(PLANIFICATIONS_FILE_NAME))) {
             String row;
             int currentIndex = 1;
 
