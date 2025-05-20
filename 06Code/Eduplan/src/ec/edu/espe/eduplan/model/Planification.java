@@ -1,7 +1,6 @@
 package ec.edu.espe.eduplan.model;
 
-import java.time.LocalTime;
-import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -11,40 +10,58 @@ import java.util.ArrayList;
 public class Planification {
     
     //Attributes
+    private String educationalLevel;
     private String activityName;
-    private String description;
-    private String activityType;
-    private String activityStatus;
-    private String evaluationCriteria;
+    private String ageGroup;
+    private int numberOfChilden;
+    private int estimatedTime; //In days
+    private Date date;
+    private String experienceOverview;
+    private String integratingElement;
+    private String transverseAxis;
     private String responsibleTeacher;
-    private ArrayList<String> academicResources;
+    private Scope scope;
     
     //Constructor
 
-    public Planification(String activityName, String description, String activityType, String activityStatus, LocalTime startTime, LocalTime endTime, String evaluationCriteria, String responsibleTeacher, ArrayList<String> academicResources) {
-        this.activityName = activityName;
-        this.description = description;
-        this.activityType = activityType;
-        this.activityStatus = activityStatus;
-        this.evaluationCriteria = evaluationCriteria;
-        this.responsibleTeacher = responsibleTeacher;
-        this.academicResources = academicResources;
+    public Planification() {
     }
+        
+    public Planification(String educationalLevel, String activityName, String ageGroup, int numberOfChilden, int estimatedTime, Date date, String experienceOverview, String integratingElement, String transverseAxis, String responsibleTeacher, Scope scope) {
+        this.educationalLevel = educationalLevel;
+        this.activityName = activityName;
+        this.ageGroup = ageGroup;
+        this.numberOfChilden = numberOfChilden;
+        this.estimatedTime = estimatedTime;
+        this.date = date;
+        this.experienceOverview = experienceOverview;
+        this.integratingElement = integratingElement;
+        this.transverseAxis = transverseAxis;
+        this.responsibleTeacher = responsibleTeacher;
+        this.scope = scope;
+    }
+   
     
     //Methods
     
-    public void addResource(String resource) {
-        academicResources.add(resource);
-    }
+    
     
     //toString
 
     @Override
     public String toString() {
-        return activityName + ";" + description + ";" + activityType + ";" + activityStatus + ";" + evaluationCriteria + ";" + responsibleTeacher + ";" + academicResources;
+        return educationalLevel + ";" + activityName + ";" + ageGroup + ";" + numberOfChilden + ";" + estimatedTime + ";" + date + ";" + experienceOverview + ";" + integratingElement + ";" + transverseAxis + ";" + responsibleTeacher + ";" + scope;
     }
 
     //Getters and Setters
+    public String getEducationalLevel() {
+        return educationalLevel;
+    }
+
+    public void setEducationalLevel(String educationalLevel) {
+        this.educationalLevel = educationalLevel;
+    }
+
     public String getActivityName() {
         return activityName;
     }
@@ -53,36 +70,60 @@ public class Planification {
         this.activityName = activityName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getAgeGroup() {
+        return ageGroup;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setAgeGroup(String ageGroup) {
+        this.ageGroup = ageGroup;
     }
 
-    public String getActivityType() {
-        return activityType;
+    public int getNumberOfChilden() {
+        return numberOfChilden;
     }
 
-    public void setActivityType(String activityType) {
-        this.activityType = activityType;
+    public void setNumberOfChilden(int numberOfChilden) {
+        this.numberOfChilden = numberOfChilden;
     }
 
-    public String getActivityStatus() {
-        return activityStatus;
+    public int getEstimatedTime() {
+        return estimatedTime;
     }
 
-    public void setActivityStatus(String activityStatus) {
-        this.activityStatus = activityStatus;
+    public void setEstimatedTime(int estimatedTime) {
+        this.estimatedTime = estimatedTime;
     }
 
-    public String getEvaluationCriteria() {
-        return evaluationCriteria;
+    public Date getDate() {
+        return date;
     }
 
-    public void setEvaluationCriteria(String evaluationCriteria) {
-        this.evaluationCriteria = evaluationCriteria;
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getExperienceOverview() {
+        return experienceOverview;
+    }
+
+    public void setExperienceOverview(String experienceOverview) {
+        this.experienceOverview = experienceOverview;
+    }
+
+    public String getIntegratingElement() {
+        return integratingElement;
+    }
+
+    public void setIntegratingElement(String integratingElement) {
+        this.integratingElement = integratingElement;
+    }
+
+    public String getTransverseAxis() {
+        return transverseAxis;
+    }
+
+    public void setTransverseAxis(String transverseAxis) {
+        this.transverseAxis = transverseAxis;
     }
 
     public String getResponsibleTeacher() {
@@ -93,12 +134,12 @@ public class Planification {
         this.responsibleTeacher = responsibleTeacher;
     }
 
-    public ArrayList<String> getAcademicResources() {
-        return academicResources;
+    public Scope getScope() {
+        return scope;
     }
 
-    public void setAcademicResources(ArrayList<String> academicResources) {
-        this.academicResources = academicResources;
+    public void setScope(Scope scope) {
+        this.scope = scope;
     }
     
 }
