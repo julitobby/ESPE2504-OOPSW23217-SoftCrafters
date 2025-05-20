@@ -99,6 +99,7 @@ public class Menu {
                 } while (!rolOption.equals("1") && !rolOption.equals("2"));
                 
                 user = new User(username, password, rol);
+                fileManagerUser.saveUserToCSV(user);
                 System.out.println("Usuario registrado exitosamente como " + rol + "!");
             }
         }

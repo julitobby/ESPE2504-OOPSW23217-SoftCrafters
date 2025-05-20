@@ -9,13 +9,31 @@ import ec.edu.espe.eduplan.model.User;
 
 public class EduPlanSystem {
     public static void main(String[] args) {
-        //Attributes
+        
+        //Creating the console interface
         Menu menu =new Menu();
-        User option;
         
-        //Use Methonds
-        option= menu.showRegistrationMenu();
+        int option = menu.showUserMenu();
         
-        System.out.println(option);
+         switch (option) {
+            case 1:
+                User user = menu.showLoginMenu();
+                
+                
+                
+                
+                
+                
+                break;
+            case 2:
+                menu.showRegistrationMenu();
+                break;
+            case 3:
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Opción no válida.");
+        }
+        
     }
 }
