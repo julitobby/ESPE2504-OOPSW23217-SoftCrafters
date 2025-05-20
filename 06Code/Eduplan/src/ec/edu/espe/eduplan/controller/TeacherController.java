@@ -11,7 +11,17 @@ public class TeacherController {
     
     
 //Teacher Menu
-    public void showTeacherMenu(User user){
+    public static void showTeacherMenu(User user){
+        System.out.println("_______Menu del Maestro_______");
+        System.out.println("""
+                           1. Crear una planificacion.
+                           2. Visualizar una planificacion en especifico.
+                           3. Editar una planificacion en especifico.
+                           4. Visualizar todas las planificaciones.
+                           -------------------------------
+                           4. Cerrar Sesion.
+                           """);
+        
         
     }
 }

@@ -1,5 +1,7 @@
 package ec.edu.espe.eduplan.util;
 
+import ec.edu.espe.eduplan.model.Principal;
+import ec.edu.espe.eduplan.model.Teacher;
 import ec.edu.espe.eduplan.model.User;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -24,10 +26,19 @@ public class FileManagerUsers {
             
     //Methods
     
-    public void saveUserToCSV(User user) {
+    public void saveTeacherToCSV(Teacher teacher) {
         try (FileWriter writer = new FileWriter(USERS_FILE_NAME , true)) {
-            writer.write(user.toString() + "\n");
-            System.out.println("Actividad guardada con exito.");
+            writer.write(teacher.toString() + "\n");
+            System.out.println("Datos personales del maestro registrados existosamente!");
+        } catch (IOException e) {
+            System.err.println("Error al guardar la actividad, intenta nuevamente.");
+        }
+    }
+    
+    public void savePrincipalToCSV(Principal principal) {
+        try (FileWriter writer = new FileWriter(USERS_FILE_NAME , true)) {
+            writer.write(principal.toString() + "\n");
+            System.out.println("Datos personales del director registrados existosamente!");
         } catch (IOException e) {
             System.err.println("Error al guardar la actividad, intenta nuevamente.");
         }

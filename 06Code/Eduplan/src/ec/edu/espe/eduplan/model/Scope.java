@@ -11,11 +11,11 @@ public class Scope {
     
     //Attributes
     private String scopeName;
-    private String skill;
+    private String skill; 
+    private MethodologicalStrategy methodologicalStrategy;
     private ArrayList<String> resourcesAndMaterials;
     private ArrayList<String> assessmentIndicators;
-    private MethodologicalStrategy methodologicalStrategy;
-
+   
     //Contructor
 
     public Scope() {

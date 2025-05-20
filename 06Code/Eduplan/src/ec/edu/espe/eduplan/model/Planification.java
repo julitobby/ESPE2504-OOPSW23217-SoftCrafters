@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class Planification {
     
     //Attributes
+    private String idPlanification;
     private String educationalLevel;
     private String activityName;
     private String ageGroup;
@@ -28,8 +29,9 @@ public class Planification {
     
     public Planification() {
     }
-    
-    public Planification(String educationalLevel, String activityName, String ageGroup, int numberOfChildren, int estimatedTime, LocalDate date, String experienceOverview, String integratingElement, String transverseAxis, String responsibleTeacher, ArrayList<Scope> scopes) {
+
+    public Planification(String idPlanification, String educationalLevel, String activityName, String ageGroup, int numberOfChildren, int estimatedTime, LocalDate date, String experienceOverview, String integratingElement, String transverseAxis, String responsibleTeacher, ArrayList<Scope> scopes) {
+        this.idPlanification = idPlanification;
         this.educationalLevel = educationalLevel;
         this.activityName = activityName;
         this.ageGroup = ageGroup;
@@ -43,7 +45,7 @@ public class Planification {
         this.scopes = scopes;
     }
     
-    
+        
     //Methods
     
     
@@ -52,10 +54,18 @@ public class Planification {
     
     @Override
     public String toString() {
-        return educationalLevel + ";" + activityName + ";" + ageGroup + ";" + numberOfChildren + ";" + estimatedTime + ";" + date + ";" + experienceOverview + ";" + integratingElement + ";" + transverseAxis + ";" + responsibleTeacher + ";" + scopes.toString();
+        return idPlanification + educationalLevel + ";" + activityName + ";" + ageGroup + ";" + numberOfChildren + ";" + estimatedTime + ";" + date + ";" + experienceOverview + ";" + integratingElement + ";" + transverseAxis + ";" + responsibleTeacher + ";" + scopes.toString();
     }
     
+    public String getIdPlanification() {
+        return idPlanification;
+    }
+
     //Getters and Setters
+    public void setIdPlanification(String idPlanification) {    
+        this.idPlanification = idPlanification;
+    }
+
     public String getEducationalLevel() {
         return educationalLevel;
     }
