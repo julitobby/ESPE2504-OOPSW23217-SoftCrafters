@@ -14,11 +14,16 @@ import java.io.IOException;
 public class FileManagerUsers {
     
     //Attributes
-
+    
     private static final String USERS_FILE_NAME  = "src/ec/edu/espe/eduplan/files/ListOfRegisteredUsers.csv";
     
-    //Methods
+    //Contructor
 
+    public FileManagerUsers() {
+    }
+            
+    //Methods
+    
     public void saveUserToCSV(User user) {
         try (FileWriter writer = new FileWriter(USERS_FILE_NAME , true)) {
             writer.write(user.toString() + "\n");
@@ -28,7 +33,7 @@ public class FileManagerUsers {
         }
     }
     
-    public User getUserbyUsername(String usernameToFind){
+    public User getUserbyUsername(String usernameToFind, String passwordToFind){
         try (BufferedReader reader = new BufferedReader(new FileReader(USERS_FILE_NAME))) {
             String row;
             
@@ -39,8 +44,8 @@ public class FileManagerUsers {
                     String username = data[0];
                     String password = data[1];
                     String rol = data[2];
-
-                    if (username.equals(usernameToFind)) {
+                    
+                    if (username.equals(usernameToFind)&&password.equals(passwordToFind)) {
                         return new User(username, password, rol);
                     }
                 }
@@ -48,8 +53,8 @@ public class FileManagerUsers {
         } catch (IOException e) {
             System.err.println("Error leyendo el archivo, intenta nuevamente");
         }
-
+        
         return null;
     }
-        
+    
 }
