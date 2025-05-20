@@ -8,6 +8,7 @@ import ec.edu.espe.eduplan.model.User;
  */
 
 public class TeacherController {
+    
 //Teacher Menu
     public void showTeacherMenu(User user){
         

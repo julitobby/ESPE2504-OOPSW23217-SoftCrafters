@@ -8,6 +8,7 @@ import ec.edu.espe.eduplan.model.User;
  */
 
 public class PrincipalController {
+    
  //Principal Menu
     public void showPrincipalMenu(User user){
         
