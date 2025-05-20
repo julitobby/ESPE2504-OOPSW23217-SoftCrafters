@@ -5,6 +5,6 @@ package ec.edu.espe.eduplan.model;
  * @author SoftCrafters
  */
 
-public class Calendar {
+public class Ambito {
 
 }

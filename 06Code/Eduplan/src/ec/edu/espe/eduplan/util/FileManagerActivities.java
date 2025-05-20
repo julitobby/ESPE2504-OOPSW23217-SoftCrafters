@@ -1,6 +1,6 @@
 package ec.edu.espe.eduplan.util;
 
-import ec.edu.espe.eduplan.model.Activity;
+import ec.edu.espe.eduplan.model.Planification;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -22,7 +22,7 @@ public class FileManagerActivities {
 
     //Methods
 
-    public void saveActivityToCSV(Activity activity) {
+    public void saveActivityToCSV(Planification activity) {
         try (FileWriter writer = new FileWriter(ACTIVITIES_FILE_NAME , true)) {
             writer.write(activity.toString() + "\n");
             System.out.println("Actividad guardada con exito.");
@@ -31,7 +31,7 @@ public class FileManagerActivities {
         }
     }
 
-    public Activity getActivityByRow(int rowIndex) {
+    public Planification getActivityByRow(int rowIndex) {
         try (BufferedReader reader = new BufferedReader(new FileReader(ACTIVITIES_FILE_NAME))) {
             String row;
             int currentIndex = 1;
@@ -59,8 +59,8 @@ public class FileManagerActivities {
                             }
                         }
 
-                        // Create and return the Activity object
-                        return new Activity(activityName, description, activityType, activityStatus, startTime, endTime, evaluationCriteria, responsibleTeacher, academicResources);
+                        // Create and return the Planification object
+                        return new Planification(activityName, description, activityType, activityStatus, startTime, endTime, evaluationCriteria, responsibleTeacher, academicResources);
                     } else {
                         System.err.println("Formato incorrecto en la Actividad: " + row);
                         return null;
@@ -75,6 +75,5 @@ public class FileManagerActivities {
         }
         return null;
     }
-
     
 }
