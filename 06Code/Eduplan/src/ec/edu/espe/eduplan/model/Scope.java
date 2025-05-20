@@ -33,7 +33,7 @@ public class Scope {
 
     @Override
     public String toString() {
-        return scopeName + ";" + skill + ";" + methodologicalStrategy.toString() + ";" + resourcesAndMaterials + ";" + assessmentIndicators;
+        return scopeName + "/" + skill + "/" + methodologicalStrategy.toString() + "/" + resourcesAndMaterials + "/" + assessmentIndicators;
     }
     
     //Getters and Setters

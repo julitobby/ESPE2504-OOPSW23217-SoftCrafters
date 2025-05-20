@@ -105,4 +105,10 @@ public class Menu {
         }
         return user;
     }
+    
+    //Planification Menu
+    public void showPlanificationMenu(){
+        System.out.println("_______Planification______");
+        System.out.println("");
+    }
 }
