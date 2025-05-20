@@ -28,37 +28,59 @@ public class Menu {
     
     //Login Menu
     public User showLoginMenu() {
-        User user = null;
-        
-        while (user == null) {
-            System.out.println("_________Iniciar Sesion_________");
-            System.out.println("1. Ingresar Datos");
-            System.out.println("2. Regresar al menu principal");
-            System.out.print("Selecciona una opcion: ");
-            String option = scanner.nextLine();
-            
-            if (option.equals("2")) {
-                System.out.println("Regresando al menu principal...");
-                return null;
-            } else if (option.equals("1")) {
-                System.out.print("Ingresa tu nombre de usuario: ");
-                String username = scanner.nextLine();
-                System.out.print("Ingresa tu contrasena: ");
-                String password = scanner.nextLine();
-                
-                user = fileManagerUser.getUserbyUsername(username, password);
-                
-                if (user == null) {
-                    System.out.println("Nombre de usuario o contraseña incorrectos. Intenta de nuevo.\n");
-                }
-            } else {
-                System.out.println("Opcion no valida. Por favor, selecciona 1 o 2.\n");
+    User user = null;
+    int intentos = 0;
+    final int MAX_INTENTOS = 3;
+    long tiempoBloqueo = 0;
+
+    while (user == null) {
+        // Si está bloqueado, esperar a que pasen los 60 segundos
+        if (System.currentTimeMillis() < tiempoBloqueo) {
+            long segundosRestantes = (tiempoBloqueo - System.currentTimeMillis()) / 1000;
+            System.out.println("Demasiados intentos fallidos. Por favor espera " + segundosRestantes + " segundos...");
+            try {
+                Thread.sleep(1000); // Espera de 1 segundo antes de mostrar de nuevo
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
             }
+            continue;
         }
-        
-        System.out.println("Inicio de sesion exitoso. Bienvenido, " + user.getUsername() + "!");
-        return user;
+
+        System.out.println("_________Iniciar Sesion_________");
+        System.out.println("1. Ingresar Datos");
+        System.out.println("2. Regresar al menu principal");
+        System.out.print("Selecciona una opcion: ");
+        String option = scanner.nextLine();
+
+        if (option.equals("2")) {
+            System.out.println("Regresando al menu principal...");
+            return null;
+        } else if (option.equals("1")) {
+            System.out.print("Ingresa tu nombre de usuario: ");
+            String username = scanner.nextLine();
+            System.out.print("Ingresa tu contrasena: ");
+            String password = scanner.nextLine();
+
+            user = fileManagerUser.getUserbyUsername(username, password);
+
+            if (user == null) {
+                intentos++;
+                System.out.println("Nombre de usuario o contraseña incorrectos. Intento " + intentos + " de " + MAX_INTENTOS + ".\n");
+
+                if (intentos >= MAX_INTENTOS) {
+                    System.out.println("Has excedido el número máximo de intentos. Espera 60 segundos para volver a intentar.\n");
+                    tiempoBloqueo = System.currentTimeMillis() + 60 * 1000; // 60 segundos
+                    intentos = 0; // Reiniciar el contador tras el bloqueo
+                }
+            }
+        } else {
+            System.out.println("Opcion no valida. Por favor, selecciona 1 o 2.\n");
+        }
     }
+
+    System.out.println("Inicio de sesion exitoso. Bienvenido, " + user.getUsername() + "!");
+    return user;
+}
     
     
     //Registration menu
