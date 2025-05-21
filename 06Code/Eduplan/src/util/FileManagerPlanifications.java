@@ -1,4 +1,4 @@
-package ec.edu.espe.eduplan.util;
+package util;
 
 import ec.edu.espe.eduplan.model.MethodologicalStrategy;
 import ec.edu.espe.eduplan.model.Planification;

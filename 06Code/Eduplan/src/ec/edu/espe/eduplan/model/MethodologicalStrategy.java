@@ -47,6 +47,4 @@
         public void setListOfStrategies(ArrayList<String> listOfStrategies) {
             this.listOfStrategies = listOfStrategies;
         }
-
-
     }

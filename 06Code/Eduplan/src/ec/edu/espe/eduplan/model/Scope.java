@@ -9,15 +9,12 @@ import java.util.ArrayList;
 
 public class Scope {
     
-    //Attributes
     private String scopeName;
     private String skill; 
     private MethodologicalStrategy methodologicalStrategy;
     private ArrayList<String> resourcesAndMaterials;
     private ArrayList<String> assessmentIndicators;
    
-    //Contructor
-
     public Scope() {
     }
 
@@ -36,8 +33,6 @@ public class Scope {
         return scopeName + "/" + skill + "/" + methodologicalStrategy.toString() + "/" + resourcesAndMaterials + "/" + assessmentIndicators;
     }
     
-    //Getters and Setters
-
     public String getScopeName() {
         return scopeName;
     }

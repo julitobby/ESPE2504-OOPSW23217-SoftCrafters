@@ -30,7 +30,6 @@ public class Teacher{
         return userTeacher.toString() + ";"+ firstNameTeacher + ";" + lastNameTeacher + ";" +idTeacher;
     }
     
-    //Getters and Setters
     public String getIdTeacher() {
         return idTeacher;
     }

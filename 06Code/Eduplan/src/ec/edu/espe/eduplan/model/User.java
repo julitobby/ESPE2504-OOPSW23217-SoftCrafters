@@ -28,7 +28,6 @@ public class User {
         return  username + ";" + password + ";" + rol;
     }
     
-    // Getters y Setters
     public String getUsername() {
         return username;
     }
@@ -51,6 +50,5 @@ public class User {
 
     public void setRol(String rol) {
         this.rol = rol;
-    }
-    
+    } 
 }

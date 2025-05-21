@@ -59,7 +59,6 @@ public class Planification {
         return idPlanification;
     }
 
-    //Getters and Setters
     public void setIdPlanification(String idPlanification) {    
         this.idPlanification = idPlanification;
     }
@@ -166,8 +165,5 @@ public class Planification {
 
     public void setDay(String day) {
         this.day = day;
-    }
-    
-    
-    
+    }    
 }

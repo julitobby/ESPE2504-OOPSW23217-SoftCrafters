@@ -1,4 +1,4 @@
-package ec.edu.espe.eduplan.util;
+package util;
 
 import ec.edu.espe.eduplan.model.Principal;
 import ec.edu.espe.eduplan.model.Teacher;
@@ -20,8 +20,6 @@ public class FileManagerUsers {
     
     private static final String USERS_FILE_NAME  = "src/ec/edu/espe/eduplan/files/ListOfRegisteredUsers.csv";
   
-    //Methods
-    
         // String que se guardara en archivo -->  username;password;rol;firstNameTeacher;lastNameTeacher;idTeacher
     
     public static void saveTeacherToCSV(Teacher teacher) {
@@ -171,5 +169,4 @@ public class FileManagerUsers {
 
     return teachers;
 }
-    
 }

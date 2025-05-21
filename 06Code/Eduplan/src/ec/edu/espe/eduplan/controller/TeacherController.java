@@ -1,7 +1,8 @@
 package ec.edu.espe.eduplan.controller;
 
+import util.FileManagerPlanifications;
+import util.FileManagerUsers;
 import ec.edu.espe.eduplan.model.*;
-import ec.edu.espe.eduplan.util.*;
 import ec.edu.espe.eduplan.view.*;
 import java.util.*;
 

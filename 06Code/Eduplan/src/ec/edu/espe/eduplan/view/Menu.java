@@ -1,7 +1,8 @@
 package ec.edu.espe.eduplan.view;
 
+import util.FileManagerPlanifications;
+import util.FileManagerUsers;
 import ec.edu.espe.eduplan.model.*;
-import ec.edu.espe.eduplan.util.*;
 import java.time.*;
 import java.util.*;
 
