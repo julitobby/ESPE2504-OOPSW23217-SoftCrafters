@@ -173,7 +173,7 @@ public class Menu {
     return principal;
 }
     
-    //Id aleatory for Teacher
+    //Id aleatory for Teacher and Principal
     public static String generateRandomId() {
         String prefix = "PROF";
         String datePart = java.time.LocalDate.now().toString().replaceAll("-", ""); // yyyyMMdd
@@ -181,4 +181,10 @@ public class Menu {
         return prefix + datePart + randomPart;
     }
     
+    public static String generateRandomIdPlanification() {
+        String prefix = "PLAN";
+        String datePart = java.time.LocalDate.now().toString().replaceAll("-", ""); // yyyyMMdd
+        String randomPart = java.util.UUID.randomUUID().toString().substring(0, 6).toUpperCase(); // 6 caracteres aleatorios
+        return prefix + datePart + randomPart;
+    }
 }

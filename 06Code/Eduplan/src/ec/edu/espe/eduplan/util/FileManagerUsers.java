@@ -115,5 +115,31 @@ public class FileManagerUsers {
     return null;
 }
 
+    public static Teacher getTeacherById(String idToFind) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(USERS_FILE_NAME))) {
+        String row;
+        while ((row = reader.readLine()) != null) {
+            String[] data = row.split(";");
+            if (data.length == 6) {
+                String username = data[0];
+                String password = data[1];
+                String rol = data[2];
+                String firstName = data[3];
+                String lastName = data[4];
+                String id = data[5];
+
+                if (id.equals(idToFind) && rol.equals("Maestro")) {
+                    User user = new User(username, password, rol);
+                    return new Teacher(user, firstName, lastName, id);
+                }
+            }
+        }
+    } catch (IOException e) {
+        System.err.println("Error leyendo el archivo de usuarios.");
+    }
+    return null;
+}
+
+    
     
 }

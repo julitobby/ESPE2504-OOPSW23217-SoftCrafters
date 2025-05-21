@@ -1,0 +1,248 @@
+[33mcommit fd5fc6991070857bc5b88fa3d811769bba802f62[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Tue May 20 18:25:23 2025 -0500
+
+    News features
+
+[33mcommit d700e190fa103f32ca0e0aeb9fa80eea6573fb7f[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Tue May 20 17:59:44 2025 -0500
+
+    Implementation of drivers in the main menu
+
+[33mcommit d486ef0792b3e05b94abba8d8e62509abe87cd31[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Tue May 20 17:43:53 2025 -0500
+
+    Remove an unnecessary class
+
+[33mcommit 1a493ce5d660023f97a0841cf8a8caab13c7bc8b[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Tue May 20 17:42:08 2025 -0500
+
+    Implementation of major changes
+
+[33mcommit 186b0354ec5f769c958b694d017f268864c1e8d9[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Tue May 20 16:23:08 2025 -0500
+
+    Implementing the full login interface
+
+[33mcommit f179c92bcc69bb2cff0d77f0c49daeb23556d34a[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Tue May 20 16:08:29 2025 -0500
+
+    Corrections to variable names
+
+[33mcommit 3d3e6268a9a1c9a631cd78fe4b024d40b3b1c7c7[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Tue May 20 16:02:05 2025 -0500
+
+    Login Attempts Implemented
+
+[33mcommit 7dd2847b611aef261cf291f9aa145aed5d1de2ee[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Tue May 20 15:47:19 2025 -0500
+
+    Resolve conflicts
+
+[33mcommit ecd6a83ea5c582f84aa91b63ba7666cb7335fd87[m
+Merge: 3ea4852 0fb9402
+Author: Gerald Astudillo Israel Ortega <giastudillo@espe.edu.ec>
+Date:   Tue May 20 06:21:28 2025 -0500
+
+    Merge branch 'main' of https://github.com/julitobby/ESPE2410-OOPSW23217-SoftCrafters
+
+[33mcommit 3ea4852f5470fdcbe5bdde9df1f937ee9294684e[m
+Author: Gerald Astudillo Israel Ortega <giastudillo@espe.edu.ec>
+Date:   Tue May 20 06:21:18 2025 -0500
+
+    Add Director class and FileModifyPlanifications utility for user management
+
+[33mcommit 0fb940264b6006e34dc66e6849944d356039cf08[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Tue May 20 00:34:19 2025 -0500
+
+    Planification Class Creation with methods for manage files
+
+[33mcommit c7382db6d4fef7aa65c897e064c932e9f41f0dbb[m
+Merge: 5272f43 199682a
+Author: Gerald Astudillo Israel Ortega <giastudillo@espe.edu.ec>
+Date:   Tue May 20 00:15:59 2025 -0500
+
+    Class Director added
+
+[33mcommit 5272f43ab470b48269487b68bca010272a614674[m
+Author: Gerald Astudillo Israel Ortega <giastudillo@espe.edu.ec>
+Date:   Tue May 20 00:02:12 2025 -0500
+
+    Adds a new `Director` class to the `model` package,
+
+[33mcommit 199682a9467d36f2ec0062ebdfeb774a89eb6575[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Mon May 19 23:48:32 2025 -0500
+
+    Correction in file classes
+
+[33mcommit 99fa4621430aa8b27aa7eadfa6dad1fb85c1b524[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Mon May 19 22:17:41 2025 -0500
+
+    Important Changes
+
+[33mcommit 1cb264ce5b58e11bf1ba1e4b28221b802bf2541d[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Mon May 19 21:03:30 2025 -0500
+
+    Update methods
+
+[33mcommit 59d2aa5939338fedcaf2c13517cdc10542656387[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Mon May 19 20:24:49 2025 -0500
+
+    Delete of files .csv unnecessary
+
+[33mcommit 4e3f6fb286bf927bbbfffe093db6545ae766df41[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Mon May 19 20:10:41 2025 -0500
+
+    Correction in the teacher and principal menus
+
+[33mcommit 71c6ad8bc653fdb7f5f752fe4e8ff6ce85a20163[m
+Author: tammycaizapanta <tammycaizapanta95@gmail.com>
+Date:   Mon May 19 20:02:09 2025 -0500
+
+    Update of deleted files
+
+[33mcommit 9968e6ed930a5689a66f8df6df3d578a1a37c240[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Mon May 19 19:54:38 2025 -0500
+
+    Delete files with conflicts
+
+[33mcommit 2553791e883247b724a593640122ee07be8a9209[m
+Merge: 4ff85fa 14248b1
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Mon May 19 19:48:00 2025 -0500
+
+    Resolved Conflicts
+
+[33mcommit 4ff85fa2deb8bd758949ae9cf71365aeaf132300[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Mon May 19 19:31:22 2025 -0500
+
+    Creating menus for the console
+
+[33mcommit 14248b15c7a530bf6c9a2a2afc07417e3a8ba37e[m
+Author: tammycaizapanta <tammycaizapanta95@gmail.com>
+Date:   Mon May 19 19:28:18 2025 -0500
+
+    UseCases_EduplanV.2 correction of design
+
+[33mcommit 8ef3f3edcf1ec8fab4dd4b1180b3109021128942[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Mon May 19 17:16:15 2025 -0500
+
+    Elimination of unnecessary classes
+
+[33mcommit 26fe157f99ea5b2704022d20b7ce8bb5a0a26893[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Mon May 19 17:13:57 2025 -0500
+
+    Implementation of the FileManagerUsers and User classes
+
+[33mcommit 1523f03b21c4f837b334c6f290d9eaf4dc281eee[m
+Author: neolukk <davidbonilla188@gmail.com>
+Date:   Mon May 19 10:50:19 2025 -0500
+
+    Implementation of methods to save and extract activities from the .csv file
+
+[33mcommit f8bc9f8270eb247e06dfde3ef91d18e3609bd2c7[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Sun May 18 23:53:07 2025 -0500
+
+    Activity Class Update and delete other unnecessary classes
+
+[33mcommit c7b961d47e2248f9ee4a0aaad355ccda963e7eb0[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Sun May 18 22:56:12 2025 -0500
+
+    Class diagram corrections
+
+[33mcommit 09530edade9be77ff00e59837bdf51b0516c094d[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Sun May 18 22:54:11 2025 -0500
+
+    Skill class implementation and .csv files
+
+[33mcommit a91e4a765ac32e3db013fb1c56393e46d48a7f3b[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Sun May 18 19:07:44 2025 -0500
+
+    Update of the documentation in its Spanish and English versions
+
+[33mcommit 819baf7339e32ec3fd474082dcb423577e48c52e[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Sun May 18 17:20:45 2025 -0500
+
+    Implementation of controller classes
+
+[33mcommit b879bd8b621f5ac9dda468814ea83dedeef26292[m
+Author: David Alejandro Bonilla Caiza <davidbonilla188@gmail.com>
+Date:   Sun May 18 17:17:23 2025 -0500
+
+    Eduplan v0.1.0 - Initial version with initial classes of use
+
+[33mcommit 0ae1c32d7409d86669da0fb11ef2e77cabf44773[m
+Author: Julio Andrade <julitobbyandrade@gmail.com>
+Date:   Thu May 15 02:21:50 2025 -0500
+
+    Agrego nuevo diagrama de clases
+
+[33mcommit 2b92a20eb2578b8f34fb4f4d1e20a583386966dc[m
+Author: Julio Andrade <julitobbyandrade@gmail.com>
+Date:   Thu May 15 02:20:15 2025 -0500
+
+    g
+
+[33mcommit 125edc947b880ac679137d9d56aaaa7672b79241[m
+Author: Julio Andrade <julitobbyandrade@gmail.com>
+Date:   Thu May 15 02:17:21 2025 -0500
+
+    g
+
+[33mcommit 8b0ab636dff370ae6a96679b5cd93f36de0afe86[m
+Author: Julio Andrade <julitobbyandrade@gmail.com>
+Date:   Thu May 15 02:15:13 2025 -0500
+
+    h
+
+[33mcommit f079c2348961d3eb6af050819aa3b06be3abd76f[m
+Author: Julio Andrade <julitobbyandrade@gmail.com>
+Date:   Thu May 15 02:13:11 2025 -0500
+
+    h
+
+[33mcommit f74abf69dc56ea24804eb9e813a6da71158c05d3[m
+Author: Julio Andrade <julitobbyandrade@gmail.com>
+Date:   Thu May 15 02:06:13 2025 -0500
+
+    s
+
+[33mcommit 5aaa9ceb88292926699f5d4718aa6f0ef5223521[m
+Author: Julio Andrade <julitobbyandrade@gmail.com>
+Date:   Thu May 15 01:56:33 2025 -0500
+
+    v2
+
+[33mcommit c88e8f93a5ebc5645821f1fe3dbd24f896613ad6[m
+Author: julitobby <julitobbyandrade@gmail.com>
+Date:   Thu May 15 02:05:10 2025 -0500
+
+    Delete 04UMLDiagrams/01UseCases/UseCases_Eduplan.V.2.vpp.
+
+[33mcommit 151e96a53e80c4a668ca1bf1a33fdce5941e12b3[m
+Author: julitobby <julitobbyandrade@gmail.com>
+Date:   Thu May 15 00:41:19 2025 -0500
+
+    Rename .UseCases_Eduplan.vpp.lck to UseCases_Ed
