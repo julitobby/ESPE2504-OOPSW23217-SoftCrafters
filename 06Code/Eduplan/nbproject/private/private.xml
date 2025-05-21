@@ -3,22 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Planification.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Scope.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/MethodologicalStrategy.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/util/FileManagerPlanifications.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Principal.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/util/FileManagerUsers.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/files/ListOfPlanifications.csv</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/view/Menu.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/util/FileModifyPlanifications.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/files/ListOfRegisteredUsers.csv</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/controller/PlanificationContoller.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/controller/PrincipalController.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/controller/TeacherController.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/view/EduPlanSystem.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Teacher.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/User.java</file>
+            <file>file:/C:/Users/tammy/Documents/OOP/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/MethodologicalStrategy.java</file>
+            <file>file:/C:/Users/tammy/Documents/OOP/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Planification.java</file>
+            <file>file:/C:/Users/tammy/Documents/OOP/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/Principal.java</file>
+            <file>file:/C:/Users/tammy/Documents/OOP/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/view/EduPlanSystem.java</file>
         </group>
     </open-files>
 </project-private>
