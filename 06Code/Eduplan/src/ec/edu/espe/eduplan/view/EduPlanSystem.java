@@ -1,14 +1,12 @@
 package ec.edu.espe.eduplan.view;
 
-import ec.edu.espe.eduplan.controller.PrincipalController;
-import ec.edu.espe.eduplan.controller.TeacherController;
-import ec.edu.espe.eduplan.model.User;
+import ec.edu.espe.eduplan.controller.*;
+import ec.edu.espe.eduplan.model.*;
 
 /**
  *
  * @author SoftCrafters
  */
-
 public class EduPlanSystem {
     public static void main(String[] args) {
         Menu menu = new Menu();
@@ -52,9 +50,8 @@ public class EduPlanSystem {
                     break;
 
                 default:
-                    System.out.println("Opción no válida.");
+                    System.out.println("Opcion no valida.");
             }
         }
     }
 }
-

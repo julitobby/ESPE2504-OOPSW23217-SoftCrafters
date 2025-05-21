@@ -1,10 +1,9 @@
 package ec.edu.espe.eduplan.view;
 
-import ec.edu.espe.eduplan.model.Principal;
-import ec.edu.espe.eduplan.model.Teacher;
-import ec.edu.espe.eduplan.model.User;
-import ec.edu.espe.eduplan.util.FileManagerUsers;
-import java.util.Scanner;
+import ec.edu.espe.eduplan.model.*;
+import ec.edu.espe.eduplan.util.*;
+import java.time.*;
+import java.util.*;
 
 /**
  *
@@ -14,6 +13,7 @@ import java.util.Scanner;
 public class Menu {
     
     Scanner scanner = new Scanner(System.in);
+    
     //Initial Menu
     public int showUserMenu() {
         System.out.println("""
@@ -82,7 +82,6 @@ public class Menu {
         System.out.println("Inicio de sesion exitoso. Bienvenido, " + user.getUsername() + "!");
         return user;
     }
-       
     
     //Registration menu
     public User showRegistrationMenu(){
@@ -131,27 +130,183 @@ public class Menu {
                 System.out.println("Usuario registrado exitosamente como " + rol + "!");
                 System.out.println("Dirigiendo a menu correspondiente...");
                 try {
-                Thread.sleep(3000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {
-                 Thread.currentThread().interrupt();
+                    Thread.currentThread().interrupt();
                 }
             }
         }
         return user;
     }
     
-    //Planification Menu
-    public void showPlanificationMenu(){
-        System.out.println("_______Planification______");
-        System.out.println("");
+    //Planification Menus
+    public static void showPlanification(String searchId){
+        Planification foundPlan = FileManagerPlanifications.getPlanificationById(searchId);
+        if (foundPlan != null) {
+            System.out.println("_____________________ INFORMACION DE LA PLANIFICACION _____________________");
+            System.out.println("ID: " + foundPlan.getIdPlanification());
+            System.out.println("Nivel Educacional: " + foundPlan.getEducationalLevel());
+            System.out.println("Actividad: " + foundPlan.getActivityName());
+            System.out.println("Grupo de Edad: " + foundPlan.getAgeGroup());
+            System.out.println("Numero de Ninos: " + foundPlan.getNumberOfChildren());
+            System.out.println("Tiempo Estimado: " + foundPlan.getEstimatedTime() + " minutos");
+            System.out.println("Fecha: " + foundPlan.getDate());
+            System.out.println("Dia de la semana: " + foundPlan.getDay());
+            System.out.println("Descripcion General: " + foundPlan.getExperienceOverview());
+            System.out.println("Elemento Integrador: " + foundPlan.getIntegratingElement());
+            System.out.println("Eje Transversal: " + foundPlan.getTransverseAxis());
+            System.out.println("Nombre del Maestro: " + foundPlan.getResponsibleTeacher() );
+            System.out.println("Id del Maestro: " + foundPlan.getIdTeacher());
+            System.out.println("----- Alcances -----");
+            
+            String scopeString = FileManagerPlanifications.getScopeLikeString(foundPlan.toString());
+            //Aqui tengo los 2 primeros datos del scope en la posicion 0,1 -- en 3,4 tengo los ultimos datos
+            String[] partsOfScope = FileManagerPlanifications.extractScopeParts(scopeString);
+            //Aqui extraigo el tercer dato MethodologicalStrategy para obtener la clase del mismo
+            String methodologicalStrategyString = partsOfScope[2];
+            //Aqui tengo los 2 datos de methodologicalStrategy en pa posicion 0,1
+            String[] partsOfethodologicalStrategy = FileManagerPlanifications.getStringOfMethodologicalStrategy(methodologicalStrategyString);
+            System.out.println(" - Nombre del Alcance: " + partsOfScope[0]);
+            System.out.println(" - Destreza: " + partsOfScope[1]);
+            System.out.println(" - Recursos y Materiales:");
+            System.out.println("            " + partsOfScope[3]);
+            System.out.println(" - Indicadores de Evaluacion:");
+            System.out.println("            " + partsOfScope[4]);
+            System.out.println(" - Estrategia Metodologica");
+            System.out.println("            Actividades Iniciales: " + partsOfethodologicalStrategy[0]);
+            //System.out.println("            Lista de Estrategias: " + partsOfethodologicalStrategy[1] + ", " +partsOfethodologicalStrategy[2]);
+        } else {
+            System.out.println("No se encontro una planificacion con ese ID.");
+        }
     }
+    
+    public static void showCreatePlanification(Teacher teacher){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("_________Planificacion_________");
+        String idPlan = Menu.generateRandomIdPlanification();
+        System.out.print("Ingrese el nivel educacional: ");
+        String level = scanner.nextLine();
+        
+        System.out.print("Ingrese el nombre de la actividad: ");
+        String activity = scanner.nextLine();
+        
+        System.out.print("Ingrese el grupo de edad: ");
+        String ageGroup = scanner.nextLine();
+        
+        System.out.print("Ingrese el numero de ninos: ");
+        int numChildren = Integer.parseInt(scanner.nextLine());
+        
+        System.out.print("Ingrese el tiempo estimado (en minutos): ");
+        int estimatedTime = Integer.parseInt(scanner.nextLine());
+        
+        System.out.print("Ingrese la fecha (YYYY-MM-DD): ");
+        LocalDate date = LocalDate.parse(scanner.nextLine());
+        
+        System.out.print("Ingrese el dia: ");
+        String day = scanner.nextLine();
+        System.out.print("Ingrese una descripcion general de la experiencia: ");
+        String overview = scanner.nextLine();
+        
+        System.out.print("Ingrese el elemento integrador: ");
+        String integrator = scanner.nextLine();
+        
+        System.out.print("Ingrese el eje transversal: ");
+        String axis = scanner.nextLine();
+        
+        String teacherFullName = teacher.getFirstNameTeacher() + " " + teacher.getLastNameTeacher();
+        String idTeacher = teacher.getIdTeacher();
+        // Scope
+        System.out.print("Ingrese el nombre del ambito: ");
+        String scopeName = scanner.nextLine();
+        
+        System.out.print("Ingrese la destreza: ");
+        String skill = scanner.nextLine();
+        
+        // Estrategia metodológica
+        System.out.print("Ingrese la actividad inicial: ");
+        String initialActivities = scanner.nextLine();
+        
+        //System.out.print("Ingrese las estrategias metodologicas (separadas por coma): ");
+        String[] strategiesArray= new String[0];
+        ArrayList<String> strategies = new ArrayList<>();
+        for (String strategy : strategiesArray) {
+            strategies.add(strategy.trim());
+        }
+        
+        MethodologicalStrategy methodologicalStrategy = new MethodologicalStrategy(initialActivities, strategies);
+        
+        // Recursos
+        System.out.print("Ingrese el material de recurso: ");
+        String[] resourcesArray = scanner.nextLine().split(",");
+        ArrayList<String> resources = new ArrayList<>();
+        for (String resource : resourcesArray) {
+            resources.add(resource.trim());
+        }
+        
+        // Indicadores de evaluación
+        System.out.print("Ingrese los indicador de evaluacion: ");
+        String[] indicatorsArray = scanner.nextLine().split(",");
+        ArrayList<String> indicators = new ArrayList<>();
+        for (String indicator : indicatorsArray) {
+            indicators.add(indicator.trim());
+        }
+        
+        Scope scope = new Scope(scopeName, skill, resources, indicators, methodologicalStrategy);
+        ArrayList<Scope> scopes = new ArrayList<>();
+        scopes.add(scope);
+        
+        Planification plan = new Planification(idPlan, level, activity, ageGroup, numChildren, estimatedTime, date, overview, integrator, axis, teacherFullName, scopes, idTeacher,day);
+        
+        FileManagerPlanifications.savePlanificationToCSV(plan);
+        System.out.println("El Id de su planificacion es: " + idPlan);
+    }
+    
+    public static void showPlanificationByTeacherId(String teacherId) {
+        Planification foundPlan = FileManagerPlanifications.getPlanificationByTeacherId(teacherId);
+        
+        if (foundPlan != null) {
+            System.out.println("_____________________ INFORMACION DE LA PLANIFICACION _____________________");
+            System.out.println("ID: " + foundPlan.getIdPlanification());
+            System.out.println("Nivel Educacional: " + foundPlan.getEducationalLevel());
+            System.out.println("Actividad: " + foundPlan.getActivityName());
+            System.out.println("Grupo de Edad: " + foundPlan.getAgeGroup());
+            System.out.println("Numero de Ninos: " + foundPlan.getNumberOfChildren());
+            System.out.println("Tiempo Estimado: " + foundPlan.getEstimatedTime() + " minutos");
+            System.out.println("Fecha: " + foundPlan.getDate());
+            System.out.println("Dia de la semana: " + foundPlan.getDay());
+            System.out.println("Descripcion General: " + foundPlan.getExperienceOverview());
+            System.out.println("Elemento Integrador: " + foundPlan.getIntegratingElement());
+            System.out.println("Eje Transversal: " + foundPlan.getTransverseAxis());
+            System.out.println("Nombre del Maestro: " + foundPlan.getResponsibleTeacher());
+            System.out.println("Id del Maestro: " + foundPlan.getIdTeacher());
+            System.out.println("----- Alcances -----");
+            
+            String scopeString = FileManagerPlanifications.getScopeLikeString(foundPlan.toString());
+            String[] partsOfScope = FileManagerPlanifications.extractScopeParts(scopeString);
+            String methodologicalStrategyString = partsOfScope[2];
+            String[] partsOfMethodologicalStrategy = FileManagerPlanifications.getStringOfMethodologicalStrategy(methodologicalStrategyString);
+            
+            System.out.println(" - Nombre del Alcance: " + partsOfScope[0]);
+            System.out.println(" - Destreza: " + partsOfScope[1]);
+            System.out.println(" - Recursos y Materiales:");
+            System.out.println("            " + partsOfScope[3]);
+            System.out.println(" - Indicadores de Evaluacion:");
+            System.out.println("            " + partsOfScope[4]);
+            System.out.println(" - Estrategia Metodologica");
+            System.out.println("            Actividad Inicial: " + partsOfMethodologicalStrategy[0]);
+            //System.out.println("            Lista de Estrategias: " + partsOfMethodologicalStrategy[1] + ", " + partsOfMethodologicalStrategy[2]);
+        } else {
+            System.out.println("No se encontro una planificacion para ese maestro.");
+        }
+    }
+    
     
     //Data Teacher Menu
     private Teacher showDataTeacherMenu(User userTeacher){
         System.out.println("_________Datos Personales_________");
-        System.out.print("Ingresa tu primer nombre: ");
+        System.out.print("Ingresa tus nombres: ");
         String firstName = scanner.nextLine();
-        System.out.print("Ingresa tu primer apellido: ");
+        System.out.print("Ingresa tus apellidos: ");
         String lastName = scanner.nextLine();
         String idTeacher = generateRandomId();
         System.out.println("Tu id para esta institucion es: " + idTeacher);
@@ -170,10 +325,10 @@ public class Menu {
         System.out.println("Tu id para esta institucion es: " + idPrincipal);
         Principal principal = new Principal(userPrincipal, firstName, lastName, idPrincipal);
         
-    return principal;
-}
+        return principal;
+    }
     
-    //Id aleatory for Teacher and Principal
+    //Id aleatory for Teacher, Principal and Planification
     public static String generateRandomId() {
         String prefix = "PROF";
         String datePart = java.time.LocalDate.now().toString().replaceAll("-", ""); // yyyyMMdd
@@ -187,4 +342,5 @@ public class Menu {
         String randomPart = java.util.UUID.randomUUID().toString().substring(0, 6).toUpperCase(); // 6 caracteres aleatorios
         return prefix + datePart + randomPart;
     }
+    
 }

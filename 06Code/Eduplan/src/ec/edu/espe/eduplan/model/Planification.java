@@ -23,14 +23,15 @@ public class Planification {
     private String transverseAxis;
     private String responsibleTeacher;
     private ArrayList<Scope> scopes;
-    
+    private String idTeacher;
+    private String day;
     
     //Constructor
     
     public Planification() {
     }
 
-    public Planification(String idPlanification, String educationalLevel, String activityName, String ageGroup, int numberOfChildren, int estimatedTime, LocalDate date, String experienceOverview, String integratingElement, String transverseAxis, String responsibleTeacher, ArrayList<Scope> scopes) {
+    public Planification(String idPlanification, String educationalLevel, String activityName, String ageGroup, int numberOfChildren, int estimatedTime, LocalDate date, String experienceOverview, String integratingElement, String transverseAxis, String responsibleTeacher, ArrayList<Scope> scopes, String idTeacher, String day) {
         this.idPlanification = idPlanification;
         this.educationalLevel = educationalLevel;
         this.activityName = activityName;
@@ -43,18 +44,15 @@ public class Planification {
         this.transverseAxis = transverseAxis;
         this.responsibleTeacher = responsibleTeacher;
         this.scopes = scopes;
+        this.idTeacher = idTeacher;
+        this.day = day;
     }
-    
-        
-    //Methods
-    
-    
-    
+
     //toString
     
     @Override
     public String toString() {
-        return idPlanification +";"+ educationalLevel + ";" + activityName + ";" + ageGroup + ";" + numberOfChildren + ";" + estimatedTime + ";" + date + ";" + experienceOverview + ";" + integratingElement + ";" + transverseAxis + ";" + responsibleTeacher + ";" + scopes.toString();
+        return idPlanification +";"+ educationalLevel + ";" + activityName + ";" + ageGroup + ";" + numberOfChildren + ";" + estimatedTime + ";" + date + ";" + experienceOverview + ";" + integratingElement + ";" + transverseAxis + ";" + responsibleTeacher + ";" + scopes.toString() + ";" + idTeacher + ";" + day;
     }
     
     public String getIdPlanification() {
@@ -152,6 +150,22 @@ public class Planification {
 
     public void setScopes(ArrayList<Scope> scopes) {
         this.scopes = scopes;
+    }
+
+    public String getIdTeacher() {
+        return idTeacher;
+    }
+
+    public void setIdTeacher(String idTeacher) {
+        this.idTeacher = idTeacher;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
     }
     
     

@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  *
@@ -48,7 +49,7 @@ public class FileManagerUsers {
             while ((row = reader.readLine()) != null) {
                 String[] data = row.split(";");
                 
-                if (data.length == 3) {
+                if (data.length == 6) {
                     String username = data[0];
                     String password = data[1];
                     String rol = data[2];
@@ -140,6 +141,35 @@ public class FileManagerUsers {
     return null;
 }
 
-    
+    public static ArrayList<Teacher> getTeachers() {
+    ArrayList<Teacher> teachers = new ArrayList<>();
+
+    try (BufferedReader br = new BufferedReader(new FileReader(USERS_FILE_NAME))) {
+        String line;
+
+        while ((line = br.readLine()) != null) {
+            String[] parts = line.split(";");
+
+            if (parts.length == 6) {
+                String username = parts[0];
+                String password = parts[1];
+                String role = parts[2];
+                String firstName = parts[3];
+                String lastName = parts[4];
+                String id = parts[5];
+
+                if (role.equalsIgnoreCase("Maestro")) {
+                    User user = new User(username, password, role);
+                    Teacher teacher = new Teacher(user, firstName, lastName, id);
+                    teachers.add(teacher);
+                }
+            }
+        }
+    } catch (IOException e) {
+        System.out.println("Error al leer el archivo: " + e.getMessage());
+    }
+
+    return teachers;
+}
     
 }
