@@ -11,8 +11,11 @@ EDUPLAN
 Authors:
 
 Andrade Julio
+
 Astudillo Gerald
+
 Bonilla David
+
 Caizapanta Tammy
 
 
