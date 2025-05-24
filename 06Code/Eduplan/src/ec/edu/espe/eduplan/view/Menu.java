@@ -192,8 +192,7 @@ public class Menu {
 			System.out.println("            " + partsOfScope[4]);
 			System.out.println(" - Estrategia Metodologica");
 			System.out.println("            Actividades Iniciales: " + partsOfethodologicalStrategy[0]);
-			// System.out.println(" Lista de Estrategias: " +
-			// partsOfethodologicalStrategy[1] + ", " +partsOfethodologicalStrategy[2]);
+
 		} else {
 			System.out.println("No se encontro una planificacion con ese ID.");
 		}
