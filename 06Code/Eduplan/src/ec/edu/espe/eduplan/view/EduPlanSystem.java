@@ -1,5 +1,7 @@
 package ec.edu.espe.eduplan.view;
 
+import java.util.InputMismatchException;
+
 import ec.edu.espe.eduplan.controller.*;
 import ec.edu.espe.eduplan.model.*;
 
@@ -13,8 +15,12 @@ public class EduPlanSystem {
         boolean exit = false;
 
         while (!exit) {
-            int option = menu.showUserMenu();
-
+            int option = -1;
+            try {	
+                option = menu.showUserMenu();
+            }catch(InputMismatchException e) {
+            	System.out.println("Ingrese una opcion valida");
+            }
             switch (option) {
                 case 1:
                     User userLogin = menu.showLoginMenu();
