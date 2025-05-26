@@ -22,6 +22,13 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# NetBeans project private configuration (ignorar configuración específica de usuario)
+# Proyecto 6-Code
 /06Code/6-Code/nbproject/private/
+# Proyecto Eduplan
+/06Code/Eduplan/nbproject/private/
+
+# Ignorar carpetas de compilación y distribución
 /06Code/Eduplan/build/
 /06Code/Eduplan/dist/
