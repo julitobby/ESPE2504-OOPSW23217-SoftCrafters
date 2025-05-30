@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/model/MethodologicalStrategy.java</file>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/util/FileManagerPlanifications.java</file>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/view/EduPlanSystem.java</file>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/controller/PrincipalController.java</file>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/view/Menu.java</file>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/files/ListOfPlanifications.csv</file>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/files/ListOfRegisteredUsers.csv</file>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/files/ListMethodologicalStrategy</file>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/files/ListScope</file>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/files/ListPrincipal</file>
+            <file>file:/C:/MD2025Files/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/files/ListTeacher</file>
+        </group>
     </open-files>
 </project-private>
