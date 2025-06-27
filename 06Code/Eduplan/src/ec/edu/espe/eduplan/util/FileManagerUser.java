@@ -1,4 +1,4 @@
-package util;
+package ec.edu.espe.eduplan.util;
 
 import ec.edu.espe.eduplan.model.Principal;
 import ec.edu.espe.eduplan.model.Teacher;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * @author SoftCrafters
  */
 
-public class FileManagerUsers {
+public class FileManagerUser {
 
 	// Attributes
 

@@ -32,3 +32,4 @@ replay_pid*
 # Ignorar carpetas de compilación y distribución
 /06Code/Eduplan/build/
 /06Code/Eduplan/dist/
+/06Code/EduPlanMaven/target/

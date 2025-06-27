@@ -1,7 +1,7 @@
 package ec.edu.espe.eduplan.controller;
 
-import util.FileManagerPlanifications;
-import util.FileManagerUsers;
+import ec.edu.espe.eduplan.util.FileManagerPlanification;
+import ec.edu.espe.eduplan.util.FileManagerUser;
 import ec.edu.espe.eduplan.model.*;
 import ec.edu.espe.eduplan.view.*;
 import java.util.*;
@@ -14,7 +14,7 @@ public class PrincipalController {
 
     public static void showPrincipalMenu(User user) {
         Scanner scanner = new Scanner(System.in);
-        Principal principal = FileManagerUsers.getPrincipalByUsername(user.getUsername(), user.getPassword());
+        Principal principal = FileManagerUser.getPrincipalByUsername(user.getUsername(), user.getPassword());
 
         boolean continuar = true;
 
@@ -38,7 +38,7 @@ public class PrincipalController {
             switch (option) {
                 case 1:
                     System.out.println("________Lista de Maestros________");
-                    ArrayList<Teacher> teachers = FileManagerUsers.getTeachers();
+                    ArrayList<Teacher> teachers = FileManagerUser.getTeachers();
 
                     int counter = 1;
                     for (Teacher teacher : teachers) {
@@ -53,7 +53,7 @@ public class PrincipalController {
 
                 case 2:
                     System.out.println("______________Visualizar una Planificacion_____________");
-                    ArrayList<Planification> planifications = FileManagerPlanifications.getPlanifications();
+                    ArrayList<Planification> planifications = FileManagerPlanification.getPlanifications();
                     
                     int counter1 = 1;
                     for (Planification planification : planifications) {

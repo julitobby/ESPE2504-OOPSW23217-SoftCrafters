@@ -1,0 +1,205 @@
+package ec.edu.espe.eduplanmaven.view;
+
+import javax.swing.JButton;
+
+/**
+ *
+ * @author SoftCrafters ESPE
+ */
+public class FrmMainMenu extends javax.swing.JFrame {
+
+    public FrmMainMenu() {
+        initComponents();
+        this.setLocationRelativeTo(null);
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        PmlMain = new javax.swing.JPanel();
+        PmlOptions = new javax.swing.JPanel();
+        BtmLogin = new javax.swing.JButton();
+        BtmRegister = new javax.swing.JButton();
+        PmlTitle = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        PmlExit = new javax.swing.JPanel();
+        BtmExit = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        BtmLogin.setText("Iniciar Sesion");
+
+        BtmRegister.setText("Registrarse");
+
+        javax.swing.GroupLayout PmlOptionsLayout = new javax.swing.GroupLayout(PmlOptions);
+        PmlOptions.setLayout(PmlOptionsLayout);
+        PmlOptionsLayout.setHorizontalGroup(
+            PmlOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PmlOptionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PmlOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BtmRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BtmLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        PmlOptionsLayout.setVerticalGroup(
+            PmlOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PmlOptionsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtmLogin)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtmRegister))
+        );
+
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 36)); // NOI18N
+        jLabel1.setText("EDUPLAN");
+
+        javax.swing.GroupLayout PmlTitleLayout = new javax.swing.GroupLayout(PmlTitle);
+        PmlTitle.setLayout(PmlTitleLayout);
+        PmlTitleLayout.setHorizontalGroup(
+            PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PmlTitleLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PmlTitleLayout.setVerticalGroup(
+            PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlTitleLayout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        BtmExit.setText("Salir");
+        BtmExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtmExitActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PmlExitLayout = new javax.swing.GroupLayout(PmlExit);
+        PmlExit.setLayout(PmlExitLayout);
+        PmlExitLayout.setHorizontalGroup(
+            PmlExitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PmlExitLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(BtmExit, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+        PmlExitLayout.setVerticalGroup(
+            PmlExitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PmlExitLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(BtmExit)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PmlMainLayout = new javax.swing.GroupLayout(PmlMain);
+        PmlMain.setLayout(PmlMainLayout);
+        PmlMainLayout.setHorizontalGroup(
+            PmlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PmlMainLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PmlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(PmlOptions, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PmlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PmlExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PmlMainLayout.setVerticalGroup(
+            PmlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PmlMainLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PmlTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PmlOptions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PmlExit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 97, Short.MAX_VALUE)
+                    .addComponent(PmlMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 98, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 39, Short.MAX_VALUE)
+                    .addComponent(PmlMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 39, Short.MAX_VALUE)))
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    //CODE OF ACTIONS
+
+    private void BtmExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtmExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BtmExitActionPerformed
+
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(FrmMainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(FrmMainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(FrmMainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(FrmMainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new FrmMainMenu().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtmExit;
+    private javax.swing.JButton BtmLogin;
+    private javax.swing.JButton BtmRegister;
+    private javax.swing.JPanel PmlExit;
+    private javax.swing.JPanel PmlMain;
+    private javax.swing.JPanel PmlOptions;
+    private javax.swing.JPanel PmlTitle;
+    private javax.swing.JLabel jLabel1;
+    // End of variables declaration//GEN-END:variables
+
+    public JButton getBtmLogin() {
+        return BtmLogin;
+    }
+
+    public JButton getBtmRegister() {
+        return BtmRegister;
+    }
+
+}

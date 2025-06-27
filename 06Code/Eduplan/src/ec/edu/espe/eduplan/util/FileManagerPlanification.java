@@ -1,4 +1,4 @@
-package util;
+package ec.edu.espe.eduplan.util;
 
 import ec.edu.espe.eduplan.model.MethodologicalStrategy;
 import ec.edu.espe.eduplan.model.Planification;
@@ -17,7 +17,7 @@ import java.util.Arrays;
  * @author SoftCrafters
  */
 
-public class FileManagerPlanifications {
+public class FileManagerPlanification {
     
     //Attributes
     

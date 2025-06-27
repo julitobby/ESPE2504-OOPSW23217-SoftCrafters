@@ -1,7 +1,7 @@
 package ec.edu.espe.eduplan.view;
 
-import util.FileManagerPlanifications;
-import util.FileManagerUsers;
+import ec.edu.espe.eduplan.util.FileManagerPlanification;
+import ec.edu.espe.eduplan.util.FileManagerUser;
 import ec.edu.espe.eduplan.model.*;
 import java.time.*;
 import java.util.*;
@@ -75,7 +75,7 @@ public class Menu {
 				System.out.print("Ingresa tu contrasena: ");
 				String password = scanner.nextLine();
 
-				user = FileManagerUsers.getUserbyUsername(username, password);
+				user = FileManagerUser.getUserbyUsername(username, password);
 
 				if (user == null) {
 					attempts++;
@@ -137,10 +137,10 @@ public class Menu {
 				user = new User(username, password, rol);
 				if (user.getRol().equals("Director")) {
 					Principal principal = showDataPrincipalMenu(user);
-					FileManagerUsers.savePrincipalToCSV(principal);
+					FileManagerUser.savePrincipalToCSV(principal);
 				} else if (user.getRol().equals("Maestro")) {
 					Teacher teacher = showDataTeacherMenu(user);
-					FileManagerUsers.saveTeacherToCSV(teacher);
+					FileManagerUser.saveTeacherToCSV(teacher);
 				}
 				System.out.println("Usuario registrado exitosamente como " + rol + "!");
 				System.out.println("Dirigiendo a menu correspondiente...");
@@ -156,7 +156,7 @@ public class Menu {
 
 	// Planification Menus
 	public static void showPlanification(String searchId) {
-		Planification foundPlan = FileManagerPlanifications.getPlanificationById(searchId);
+		Planification foundPlan = FileManagerPlanification.getPlanificationById(searchId);
 		if (foundPlan != null) {
 			System.out.println("_____________________ INFORMACION DE LA PLANIFICACION _____________________");
 			System.out.println("ID: " + foundPlan.getIdPlanification());
@@ -174,15 +174,15 @@ public class Menu {
 			System.out.println("Id del Maestro: " + foundPlan.getIdTeacher());
 			System.out.println("----- Alcances -----");
 
-			String scopeString = FileManagerPlanifications.getScopeLikeString(foundPlan.toString());
+			String scopeString = FileManagerPlanification.getScopeLikeString(foundPlan.toString());
 			// Aqui tengo los 2 primeros datos del scope en la posicion 0,1 -- en 3,4 tengo
 			// los ultimos datos
-			String[] partsOfScope = FileManagerPlanifications.extractScopeParts(scopeString);
+			String[] partsOfScope = FileManagerPlanification.extractScopeParts(scopeString);
 			// Aqui extraigo el tercer dato MethodologicalStrategy para obtener la clase del
 			// mismo
 			String methodologicalStrategyString = partsOfScope[2];
 			// Aqui tengo los 2 datos de methodologicalStrategy en pa posicion 0,1
-			String[] partsOfethodologicalStrategy = FileManagerPlanifications
+			String[] partsOfethodologicalStrategy = FileManagerPlanification
 					.getStringOfMethodologicalStrategy(methodologicalStrategyString);
 			System.out.println(" - Nombre del Alcance: " + partsOfScope[0]);
 			System.out.println(" - Destreza: " + partsOfScope[1]);
@@ -277,12 +277,12 @@ public class Menu {
 		Planification plan = new Planification(idPlan, level, activity, ageGroup, numChildren, estimatedTime, date,
 				overview, integrator, axis, teacherFullName, scopes, idTeacher, day);
 
-		FileManagerPlanifications.savePlanificationToCSV(plan);
+		FileManagerPlanification.savePlanificationToCSV(plan);
 		System.out.println("El Id de su planificacion es: " + idPlan);
 	}
 
 	public static void showPlanificationByTeacherId(String teacherId) {
-		Planification foundPlan = FileManagerPlanifications.getPlanificationByTeacherId(teacherId);
+		Planification foundPlan = FileManagerPlanification.getPlanificationByTeacherId(teacherId);
 
 		if (foundPlan != null) {
 			System.out.println("_____________________ INFORMACION DE LA PLANIFICACION _____________________");
@@ -301,10 +301,10 @@ public class Menu {
 			System.out.println("Id del Maestro: " + foundPlan.getIdTeacher());
 			System.out.println("----- Alcances -----");
 
-			String scopeString = FileManagerPlanifications.getScopeLikeString(foundPlan.toString());
-			String[] partsOfScope = FileManagerPlanifications.extractScopeParts(scopeString);
+			String scopeString = FileManagerPlanification.getScopeLikeString(foundPlan.toString());
+			String[] partsOfScope = FileManagerPlanification.extractScopeParts(scopeString);
 			String methodologicalStrategyString = partsOfScope[2];
-			String[] partsOfMethodologicalStrategy = FileManagerPlanifications
+			String[] partsOfMethodologicalStrategy = FileManagerPlanification
 					.getStringOfMethodologicalStrategy(methodologicalStrategyString);
 
 			System.out.println(" - Nombre del Alcance: " + partsOfScope[0]);
