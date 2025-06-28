@@ -1,36 +1,56 @@
 package ec.edu.espe.eduplanmaven.controller;
 
-import ec.edu.espe.eduplanmaven.model.*;
 import ec.edu.espe.eduplanmaven.view.FrmMainMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 
 /**
- *
- * @author Bonilla David SoftCrafters
+ * 
+ * @author SoftCrafters
  */
-public class MainMenuController implements ActionListener, ItemListener {
+public class MainMenuController implements ActionListener {
 
-    //Declare View
+    private static MainMenuController instance;
     private FrmMainMenu frmMainMenu;
 
-    public MainMenuController(FrmMainMenu frmMainMenu) {
-        this.frmMainMenu = frmMainMenu;
-        //Actions
+    private static final String btmLogin = "Login";
+    private static final String btmRegister = "Register";
+
+    private MainMenuController() {
+        this.frmMainMenu = FrmMainMenu.getInstance();
         frmMainMenu.getBtmLogin().addActionListener(this);
         frmMainMenu.getBtmRegister().addActionListener(this);
+        frmMainMenu.getBtmLogin().setActionCommand(btmLogin);
+        frmMainMenu.getBtmRegister().setActionCommand(btmRegister);
+    }
+
+    public static MainMenuController getInstance() {
+        if (instance == null) {
+            instance = new MainMenuController();
+        }
+        return instance;
+    }
+
+    public void showMainMenu() {
+        javax.swing.Timer timer = new javax.swing.Timer(2000, e -> {
+            frmMainMenu.setVisible(true);
+        });
+        timer.setRepeats(false);
+        timer.start();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        String button = e.getActionCommand();
+        switch (button) {
+            case btmLogin -> {
+                FrmLoginController.getInstance().showLogin();
+                frmMainMenu.setVisible(false);
+            }
+            case btmRegister -> {
+                FrmRegisterController.getInstance().showRegister();
+                frmMainMenu.setVisible(false);
+            }
+        }
     }
-
-    @Override
-    public void itemStateChanged(ItemEvent e) {
-
-    }
-
 }

@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/util/FileManagerMethodologicalStrategy.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/util/FileManagerPrincipal.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/util/FileManagerScope.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/util/FileManagerTeacher.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/util/FileManagerPlanification.java</file>
-            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/view/MenuLogin.java</file>
+            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/util/FileManagerScope.java</file>
             <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/view/MenuPrincipal.java</file>
             <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/view/MenuTeacher.java</file>
+            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/view/Menu.java</file>
+            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/view/EduPlanSystem.java</file>
+            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/controller/TeacherController.java</file>
+            <file>file:/C:/Users/david/Documents/GitHub%20-%20University/ESPE2504-OOPSW23217-SoftCrafters/06Code/Eduplan/src/ec/edu/espe/eduplan/controller/PrincipalController.java</file>
         </group>
     </open-files>
 </project-private>

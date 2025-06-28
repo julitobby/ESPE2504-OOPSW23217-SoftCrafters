@@ -1,14 +1,27 @@
 package ec.edu.espe.eduplanmaven.view;
 
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author SoftCrafters ESPE
  */
 public class FrmLogin extends javax.swing.JFrame {
 
-    public FrmLogin() {
+    private static FrmLogin instance;
+
+    private FrmLogin() {
         initComponents();
         this.setLocationRelativeTo(null);
+    }
+
+    public static FrmLogin getInstance() {
+        if (instance == null) {
+            instance = new FrmLogin();
+        }
+        return instance;
     }
 
     @SuppressWarnings("unchecked")
@@ -24,9 +37,10 @@ public class FrmLogin extends javax.swing.JFrame {
         txtUser = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         btmLogin = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btmBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inicias Sesión");
         setPreferredSize(new java.awt.Dimension(400, 300));
         setResizable(false);
 
@@ -86,18 +100,8 @@ public class FrmLogin extends javax.swing.JFrame {
         );
 
         btmLogin.setText("Iniciar Sesión");
-        btmLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmLoginActionPerformed(evt);
-            }
-        });
 
-        jButton1.setText("Regresar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        btmBack.setText("Regresar");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -105,7 +109,7 @@ public class FrmLogin extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btmBack)
                 .addGap(42, 42, 42)
                 .addComponent(btmLogin)
                 .addGap(28, 28, 28))
@@ -115,7 +119,7 @@ public class FrmLogin extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(btmBack)
                     .addComponent(btmLogin))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -153,16 +157,6 @@ public class FrmLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    //CODE OF ACTIONS
-
-    private void btmLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmLoginActionPerformed
-
-    }//GEN-LAST:event_btmLoginActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -196,8 +190,8 @@ public class FrmLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btmBack;
     private javax.swing.JButton btmLogin;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -207,4 +201,29 @@ public class FrmLogin extends javax.swing.JFrame {
     private javax.swing.JPasswordField pwdPassword;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtmBack() {
+        return btmBack;
+    }
+
+    public JButton getBtmLogin() {
+        return btmLogin;
+    }
+
+    public JPasswordField getPwdPassword() {
+        return pwdPassword;
+    }
+
+    public void setPwdPassword(JPasswordField pwdPassword) {
+        this.pwdPassword = pwdPassword;
+    }
+
+    public JTextField getTxtUser() {
+        return txtUser;
+    }
+
+    public void setTxtUser(JTextField txtUser) {
+        this.txtUser = txtUser;
+    }
+
 }

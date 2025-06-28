@@ -8,9 +8,24 @@ import javax.swing.JButton;
  */
 public class FrmMainMenu extends javax.swing.JFrame {
 
-    public FrmMainMenu() {
+    private static FrmMainMenu instance;
+
+    private FrmMainMenu() {
         initComponents();
         this.setLocationRelativeTo(null);
+    }
+
+    public static FrmMainMenu getInstance() {
+        if (instance == null) {
+            instance = new FrmMainMenu();
+        }
+        return instance;
+    }
+
+    public void showMainMenu(FrmMainMenu frmMainMenu) {
+        new javax.swing.Timer(2000, e -> {
+            frmMainMenu.setVisible(true);
+        }).start();
     }
 
     @SuppressWarnings("unchecked")
@@ -27,6 +42,7 @@ public class FrmMainMenu extends javax.swing.JFrame {
         BtmExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("EduPlan v2.0");
         setResizable(false);
 
         BtmLogin.setText("Iniciar Sesion");

@@ -1,8 +1,6 @@
 package ec.edu.espe.eduplanmaven.view;
 
 import java.awt.Color;
-import java.awt.Image;
-import javax.swing.ImageIcon;
 import javax.swing.Timer;
 
 /**
@@ -14,16 +12,13 @@ public class SplashWindow extends javax.swing.JFrame {
     public SplashWindow() {
         initComponents();
         this.setLocationRelativeTo(null);
-         getContentPane().setBackground(new Color(51, 51, 51));
-
+        getContentPane().setBackground(new Color(51, 51, 51));
         //Timer 2 seconds
         Timer timer = new Timer(2000, e -> {
-            new FrmMainMenu().setVisible(true);
             dispose();
         });
         timer.setRepeats(false);
         timer.start();
-
     }
 
     @SuppressWarnings("unchecked")
