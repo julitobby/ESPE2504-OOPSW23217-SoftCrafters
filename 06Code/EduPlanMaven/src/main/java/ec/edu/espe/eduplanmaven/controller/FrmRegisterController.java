@@ -1,17 +1,18 @@
 package ec.edu.espe.eduplanmaven.controller;
 
-import ec.edu.espe.eduplanmaven.view.FrmLogin;
+import ec.edu.espe.eduplanmaven.util.FileManagerUser;
 import ec.edu.espe.eduplanmaven.view.FrmMainMenu;
 import ec.edu.espe.eduplanmaven.view.FrmRegister;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import javax.swing.JOptionPane;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
- * @author Bonilla David SoftCrafters
+ * @author SoftCrafters
  */
 public class FrmRegisterController implements ActionListener, ItemListener {
 
@@ -49,20 +50,42 @@ public class FrmRegisterController implements ActionListener, ItemListener {
 
         switch (button) {
             case "Register" -> {
-
-                JOptionPane.showMessageDialog(frmRegister.getRootPane(), "Registro exitoso", "Información", JOptionPane.INFORMATION_MESSAGE);
-
+                FileManagerUser.getInstance().checkRegister();
             }
+
             case "Back" -> {
-                frmRegister.setVisible(false);
+                FrmRegister.getInstance().setVisible(false);
                 FrmMainMenu.getInstance().setVisible(true);
+                FileManagerUser.getInstance().clearRegister();
             }
         }
+
     }
 
     @Override
     public void itemStateChanged(ItemEvent e) {
+        if (e.getStateChange() == ItemEvent.SELECTED) {
+            String rol = FrmRegister.getInstance().getCmbRol().getSelectedItem().toString();
+            String idGenerado = generarIdUnico(rol);
+            FrmRegister.getInstance().getShowID().setText(idGenerado);
+        }
 
     }
 
+    private String generarIdUnico(String rol) {
+        String prefijo = "";
+        if ("Maestro".equalsIgnoreCase(rol)) {
+            prefijo = "MTR";
+        } else if ("Director".equalsIgnoreCase(rol)) {
+            prefijo = "DRT";
+        }
+
+        int numeroAleatorio = (int) (Math.random() * 900000) + 100000;
+
+        LocalDate fechaHoy = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+        String fechaFormateada = fechaHoy.format(formatter);
+
+        return prefijo + numeroAleatorio + fechaFormateada;
+    }
 }

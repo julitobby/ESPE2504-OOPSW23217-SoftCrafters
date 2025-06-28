@@ -1,5 +1,6 @@
 package ec.edu.espe.eduplanmaven.controller;
 
+import ec.edu.espe.eduplanmaven.util.FileManagerUser;
 import ec.edu.espe.eduplanmaven.view.FrmLogin;
 import ec.edu.espe.eduplanmaven.view.FrmMainMenu;
 import java.awt.event.ActionEvent;
@@ -42,15 +43,14 @@ public class FrmLoginController implements ActionListener {
 
         switch (button) {
             case "Login" -> {
-                //AQUI DEBE COMPARAR CON LA BASE DE DATOS Y LUEGO DECIR SI EL USUARIO EXISTE O ONO, si existe debe redireccionar a cada menu
-                
-                frmLogin.setVisible(false);
-                
-                FrmMenuTeacherController.getInstance().showLMenuTeacher();
-                FrmMenuPrincipalController.getInstance().showLMenuPrincipal();
+                String username = frmLogin.getTxtUser().getText();
+                String password = frmLogin.getPwdPassword().getText();
+                FileManagerUser.getInstance().loginUser(username, password);
             }
             case "Back" -> {
                 frmLogin.setVisible(false);
+                frmLogin.getTxtUser().setText("");
+                frmLogin.getPwdPassword().setText("");
                 FrmMainMenu.getInstance().setVisible(true);
             }
         }

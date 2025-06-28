@@ -1,5 +1,7 @@
 package ec.edu.espe.eduplanmaven.view;
 
+import javax.swing.SwingConstants;
+
 /**
  *
  * @author SoftCrafters ESPE
@@ -11,6 +13,10 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     private FrmMenuPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.showTitleNamePrincipal.setVerticalAlignment(SwingConstants.CENTER);
+        this.showTitleNamePrincipal.setHorizontalAlignment(SwingConstants.CENTER);
+        this.jLabel1.setVerticalAlignment(SwingConstants.CENTER);
+        this.jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
     }
 
     public static FrmMenuPrincipal getInstance() {
@@ -40,6 +46,8 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
         jLabel1.setText("Bienvenido Director");
+
+        showTitleNamePrincipal.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout PmlTitleLayout = new javax.swing.GroupLayout(PmlTitle);
         PmlTitle.setLayout(PmlTitleLayout);
@@ -224,6 +232,5 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     public void setShowTitleNamePrincipal(javax.swing.JLabel showTitleNamePrincipal) {
         this.showTitleNamePrincipal = showTitleNamePrincipal;
     }
-
 
 }

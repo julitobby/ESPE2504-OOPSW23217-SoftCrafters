@@ -1,5 +1,7 @@
 package ec.edu.espe.eduplanmaven.view;
 
+import javax.swing.SwingConstants;
+
 /**
  *
  * @author SoftCrafters ESPE
@@ -11,6 +13,10 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
     private FrmMenuTeacher() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.showTitleNameTeacher.setVerticalAlignment(SwingConstants.CENTER);
+        this.showTitleNameTeacher.setHorizontalAlignment(SwingConstants.CENTER);
+        this.jLabel1.setVerticalAlignment(SwingConstants.CENTER);
+        this.jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
     }
 
     public static FrmMenuTeacher getInstance() {
@@ -40,6 +46,8 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
         jLabel1.setText("Bienvenido Maestro");
+
+        showTitleNameTeacher.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout PmlTitleLayout = new javax.swing.GroupLayout(PmlTitle);
         PmlTitle.setLayout(PmlTitleLayout);

@@ -10,11 +10,11 @@ import com.mongodb.client.MongoDatabase;
 
 public class MongoClientConnection {
 
-    private MongoClient mongoClient;
-    private MongoDatabase database;
+    private static MongoClientConnection instance;
+    private final MongoClient mongoClient;
+    private final MongoDatabase database;
 
-    public MongoClientConnection() {
-
+    private MongoClientConnection() {
         String connectionString = "mongodb+srv://eduplan:eduplan@cluster0.vbzft1p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
         ServerApi serverApi = ServerApi.builder()
@@ -27,40 +27,17 @@ public class MongoClientConnection {
                 .build();
 
         mongoClient = MongoClients.create(settings);
-
         database = mongoClient.getDatabase("EduPlanDB");
     }
 
-    
-    //__________________________________________________________________________
-    
-    /**
-     * @return the mongoClient
-     */
-    public MongoClient getMongoClient() {
-        return mongoClient;
+    public static synchronized MongoClientConnection getInstance() {
+        if (instance == null) {
+            instance = new MongoClientConnection();
+        }
+        return instance;
     }
 
-    /**
-     * @param mongoClient the mongoClient to set
-     */
-    public void setMongoClient(MongoClient mongoClient) {
-        this.mongoClient = mongoClient;
-    }
-
-    /**
-     * @return the database
-     */
     public MongoDatabase getDatabase() {
         return database;
     }
-
-    /**
-     * @param database the database to set
-     */
-    public void setDatabase(MongoDatabase database) {
-        this.database = database;
-    }
-
-
 }

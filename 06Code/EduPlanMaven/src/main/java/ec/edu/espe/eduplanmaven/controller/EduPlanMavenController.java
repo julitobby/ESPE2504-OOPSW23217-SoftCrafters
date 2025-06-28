@@ -1,6 +1,6 @@
 package ec.edu.espe.eduplanmaven.controller;
 
-import ec.edu.espe.eduplanmaven.view.*;
+import ec.edu.espe.eduplanmaven.view.SplashWindow;
 
 /**
  *
@@ -9,8 +9,7 @@ import ec.edu.espe.eduplanmaven.view.*;
 public class EduPlanMavenController {
     public static void main(String[] args) {
         SplashWindow splashWindow = new SplashWindow();
-        MainMenuController mainMenuController = MainMenuController.getInstance();
-        mainMenuController.showMainMenu();
+        MainMenuController.getInstance().showMainMenu();
         splashWindow.setVisible(true);
     }
 }

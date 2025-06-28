@@ -1,17 +1,32 @@
 package ec.edu.espe.eduplanmaven.util;
 
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
-/**
- *
- * @author SoftCrafters
- */
 public class FileManagerPlanification {
 
-    public static MongoClientConnection connection = new MongoClientConnection();
-    public static MongoDatabase database = connection.getDatabase();
-    public static MongoCollection<Document> collection = database.getCollection("plans");
+    private static FileManagerPlanification instance;
+    private final MongoCollection<Document> collection;
 
+    private FileManagerPlanification() {
+        collection = MongoClientConnection.getInstance().getDatabase().getCollection("plans");
+    }
+
+    public static synchronized FileManagerPlanification getInstance() {
+        if (instance == null) {
+            instance = new FileManagerPlanification();
+        }
+        return instance;
+    }
+
+    public MongoCollection<Document> getCollection() {
+        return collection;
+    }
+
+    // Ejemplo de método para insertar un plan
+    public void insertPlan(Document plan) {
+        collection.insertOne(plan);
+    }
+
+    // Puedes agregar más métodos CRUD aquí
 }
