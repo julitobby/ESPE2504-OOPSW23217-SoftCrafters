@@ -19,14 +19,5 @@ public class FileManagerPlanification {
         return instance;
     }
 
-    public MongoCollection<Document> getCollection() {
-        return collection;
-    }
 
-    // Ejemplo de método para insertar un plan
-    public void insertPlan(Document plan) {
-        collection.insertOne(plan);
-    }
-
-    // Puedes agregar más métodos CRUD aquí
 }

@@ -192,4 +192,21 @@ public class FileManagerUser {
         }
     }
 
+    public User findTeacherByLastName(String lastName) {
+        Document query = new Document("lastName", lastName)
+                .append("rol", "Maestro");
+
+        Document teacherDoc = collection.find(query).first();
+
+        return new User(
+                teacherDoc.getString("id"),
+                teacherDoc.getString("firstName"),
+                teacherDoc.getString("lastName"),
+                teacherDoc.getString("userName"),
+                teacherDoc.getString("password"),
+                teacherDoc.getString("rol")
+        );
+
+    }
+
 }

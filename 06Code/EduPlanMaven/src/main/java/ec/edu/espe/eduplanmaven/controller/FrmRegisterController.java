@@ -86,6 +86,6 @@ public class FrmRegisterController implements ActionListener, ItemListener {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
         String fechaFormateada = fechaHoy.format(formatter);
 
-        return prefijo + numeroAleatorio + fechaFormateada;
+        return prefijo + fechaFormateada + numeroAleatorio;
     }
 }

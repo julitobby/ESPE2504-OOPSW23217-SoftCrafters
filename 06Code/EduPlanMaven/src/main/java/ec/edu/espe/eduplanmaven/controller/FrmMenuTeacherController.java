@@ -4,9 +4,6 @@ import ec.edu.espe.eduplanmaven.view.FrmMainMenu;
 import ec.edu.espe.eduplanmaven.view.FrmMenuTeacher;
 import ec.edu.espe.eduplanmaven.view.PnlCreatePlan;
 import ec.edu.espe.eduplanmaven.view.PnlFindPlan;
-import ec.edu.espe.eduplanmaven.view.PnlFindPlan;
-import ec.edu.espe.eduplanmaven.view.PnlViewAllPlans;
-import ec.edu.espe.eduplanmaven.view.PnlViewByTeacher;
 import ec.edu.espe.eduplanmaven.view.PnlViewPlans;
 import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
@@ -41,6 +38,8 @@ public class FrmMenuTeacherController implements ActionListener {
         frmMenuTeacher.revalidate();
         frmMenuTeacher.repaint();
         frmMenuTeacher.pack();
+        
+        PnlCreatePlanController.getInstance();
     }
 
     public static FrmMenuTeacherController getInstance() {
@@ -58,13 +57,14 @@ public class FrmMenuTeacherController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String button = e.getActionCommand();
         CardLayout cardLayout = (CardLayout) frmMenuTeacher.getPmlActions().getLayout();
-
+        
         switch (button) {
             case "Create" -> {
                 cardLayout.show(frmMenuTeacher.getPmlActions(), "CreatePlan");
                 frmMenuTeacher.revalidate();
                 frmMenuTeacher.repaint();
                 frmMenuTeacher.pack();
+                PnlCreatePlanController.getInstance();
                 System.out.println("a");
 
             }
@@ -73,6 +73,7 @@ public class FrmMenuTeacherController implements ActionListener {
                 frmMenuTeacher.revalidate();
                 frmMenuTeacher.repaint();
                 frmMenuTeacher.pack();
+                
                 System.out.println("b");
             }
             case "ViewPlans" -> {
