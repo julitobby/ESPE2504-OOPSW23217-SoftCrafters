@@ -1,5 +1,7 @@
 package ec.edu.espe.eduplanmaven.view;
 
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 /**
@@ -13,6 +15,7 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
     private FrmMenuTeacher() {
         initComponents();
         this.setLocationRelativeTo(null);
+        PmlActions.setLayout(new java.awt.CardLayout());
         this.showTitleNameTeacher.setVerticalAlignment(SwingConstants.CENTER);
         this.showTitleNameTeacher.setHorizontalAlignment(SwingConstants.CENTER);
         this.jLabel1.setVerticalAlignment(SwingConstants.CENTER);
@@ -33,12 +36,14 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
         PmlTitle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         showTitleNameTeacher = new javax.swing.JLabel();
-        PmlActions = new javax.swing.JPanel();
-        BtmCreatePlan = new javax.swing.JButton();
-        BtmFindPlan = new javax.swing.JButton();
-        BtmViewPlans = new javax.swing.JButton();
-        PmlLogout = new javax.swing.JPanel();
         BtmLogout = new javax.swing.JButton();
+        PmlActions = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        MnuCreatePlan = new javax.swing.JMenuItem();
+        MnuFindPlan = new javax.swing.JMenuItem();
+        MnuViewAllPlans = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduPlan para Maestros");
@@ -49,90 +54,76 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
 
         showTitleNameTeacher.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
 
+        BtmLogout.setText("Cerrar Sesión");
+
         javax.swing.GroupLayout PmlTitleLayout = new javax.swing.GroupLayout(PmlTitle);
         PmlTitle.setLayout(PmlTitleLayout);
         PmlTitleLayout.setHorizontalGroup(
             PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PmlTitleLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(42, 42, 42)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(showTitleNameTeacher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(showTitleNameTeacher, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(BtmLogout)
+                .addGap(16, 16, 16))
         );
         PmlTitleLayout.setVerticalGroup(
             PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlTitleLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addGroup(PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(showTitleNameTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(PmlTitleLayout.createSequentialGroup()
+                .addContainerGap(8, Short.MAX_VALUE)
+                .addGroup(PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(showTitleNameTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BtmLogout, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
-
-        BtmCreatePlan.setText("Crear Planificación");
-
-        BtmFindPlan.setText("Buscar Planificación");
-
-        BtmViewPlans.setText("Ver Planificaciones");
 
         javax.swing.GroupLayout PmlActionsLayout = new javax.swing.GroupLayout(PmlActions);
         PmlActions.setLayout(PmlActionsLayout);
         PmlActionsLayout.setHorizontalGroup(
             PmlActionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlActionsLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(PmlActionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(BtmFindPlan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BtmCreatePlan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BtmViewPlans, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(123, 123, 123))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         PmlActionsLayout.setVerticalGroup(
             PmlActionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PmlActionsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BtmCreatePlan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BtmFindPlan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BtmViewPlans)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 444, Short.MAX_VALUE)
         );
 
-        BtmLogout.setText("Cerrar Sesión");
+        jMenu1.setText("Ver");
 
-        javax.swing.GroupLayout PmlLogoutLayout = new javax.swing.GroupLayout(PmlLogout);
-        PmlLogout.setLayout(PmlLogoutLayout);
-        PmlLogoutLayout.setHorizontalGroup(
-            PmlLogoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlLogoutLayout.createSequentialGroup()
-                .addContainerGap(143, Short.MAX_VALUE)
-                .addComponent(BtmLogout)
-                .addGap(141, 141, 141))
-        );
-        PmlLogoutLayout.setVerticalGroup(
-            PmlLogoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PmlLogoutLayout.createSequentialGroup()
-                .addComponent(BtmLogout)
-                .addGap(0, 18, Short.MAX_VALUE))
-        );
+        MnuCreatePlan.setText("Crear Planificación");
+        jMenu1.add(MnuCreatePlan);
+
+        MnuFindPlan.setText("Buscar Planificación");
+        jMenu1.add(MnuFindPlan);
+
+        MnuViewAllPlans.setText("Ver todas mis Planificaciones");
+        jMenu1.add(MnuViewAllPlans);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addComponent(PmlActions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PmlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(PmlActions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(PmlLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(16, 16, 16))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jSeparator1)))
+                        .addGap(16, 16, 16))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,10 +131,10 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(PmlTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PmlActions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(PmlLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PmlActions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();
@@ -182,32 +173,21 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtmCreatePlan;
-    private javax.swing.JButton BtmFindPlan;
     private javax.swing.JButton BtmLogout;
-    private javax.swing.JButton BtmViewPlans;
+    private javax.swing.JMenuItem MnuCreatePlan;
+    private javax.swing.JMenuItem MnuFindPlan;
+    private javax.swing.JMenuItem MnuViewAllPlans;
     private javax.swing.JPanel PmlActions;
-    private javax.swing.JPanel PmlLogout;
     private javax.swing.JPanel PmlTitle;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel showTitleNameTeacher;
     // End of variables declaration//GEN-END:variables
 
-    public javax.swing.JButton getBtmCreatePlan() {
-        return BtmCreatePlan;
-    }
 
-    public void setBtmCreatePlan(javax.swing.JButton BtmCreatePlan) {
-        this.BtmCreatePlan = BtmCreatePlan;
-    }
 
-    public javax.swing.JButton getBtmFindPlan() {
-        return BtmFindPlan;
-    }
-
-    public void setBtmFindPlan(javax.swing.JButton BtmFindPlan) {
-        this.BtmFindPlan = BtmFindPlan;
-    }
 
     public javax.swing.JButton getBtmLogout() {
         return BtmLogout;
@@ -217,13 +197,6 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
         this.BtmLogout = BtmLogout;
     }
 
-    public javax.swing.JButton getBtmViewPlans() {
-        return BtmViewPlans;
-    }
-
-    public void setBtmViewPlans(javax.swing.JButton BtmViewPlans) {
-        this.BtmViewPlans = BtmViewPlans;
-    }
 
     public javax.swing.JLabel getShowTitleNameTeacher() {
         return showTitleNameTeacher;
@@ -233,4 +206,38 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
         this.showTitleNameTeacher = showTitleNameTeacher;
     }
 
+    public JMenuItem getMnuCreatePlan() {
+        return MnuCreatePlan;
+    }
+
+    public void setMnuCreatePlan(JMenuItem MnuCreatePlan) {
+        this.MnuCreatePlan = MnuCreatePlan;
+    }
+
+    public JMenuItem getMnuFindPlan() {
+        return MnuFindPlan;
+    }
+
+    public void setMnuFindPlan(JMenuItem MnuFindPlan) {
+        this.MnuFindPlan = MnuFindPlan;
+    }
+
+    public JMenuItem getMnuViewAllPlans() {
+        return MnuViewAllPlans;
+    }
+
+    public void setMnuViewAllPlans(JMenuItem MnuViewAllPlans) {
+        this.MnuViewAllPlans = MnuViewAllPlans;
+    }
+
+    public JPanel getPmlActions() {
+        return PmlActions;
+    }
+
+    public void setPmlActions(JPanel PmlActions) {
+        this.PmlActions = PmlActions;
+    }
+
+    
+    
 }
