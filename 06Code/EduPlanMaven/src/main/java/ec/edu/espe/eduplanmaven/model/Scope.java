@@ -11,27 +11,18 @@ public class Scope {
     
     private String scopeName;
     private String skill; 
-    private MethodologicalStrategy methodologicalStrategy;
+    private ArrayList<String> methodologicalStrategy;
     private ArrayList<String> resourcesAndMaterials;
     private ArrayList<String> assessmentIndicators;
-   
-    public Scope() {
-    }
 
-    public Scope(String scopeName, String skill, ArrayList<String> resourcesAndMaterials, ArrayList<String> assessmentIndicators, MethodologicalStrategy methodologicalStrategy) {
+    public Scope(String scopeName, String skill, ArrayList<String> methodologicalStrategy, ArrayList<String> resourcesAndMaterials, ArrayList<String> assessmentIndicators) {
         this.scopeName = scopeName;
         this.skill = skill;
+        this.methodologicalStrategy = methodologicalStrategy;
         this.resourcesAndMaterials = resourcesAndMaterials;
         this.assessmentIndicators = assessmentIndicators;
-        this.methodologicalStrategy = methodologicalStrategy;
     }
-            
-    //toString
 
-    @Override
-    public String toString() {
-        return scopeName + "/" + skill + "/" + methodologicalStrategy.toString() + "/" + resourcesAndMaterials + "/" + assessmentIndicators;
-    }
     
     public String getScopeName() {
         return scopeName;
@@ -65,13 +56,14 @@ public class Scope {
         this.assessmentIndicators = assessmentIndicators;
     }
 
-    public MethodologicalStrategy getMethodologicalStrategy() {
+    public ArrayList<String> getMethodologicalStrategy() {
         return methodologicalStrategy;
     }
 
-    public void setMethodologicalStrategy(MethodologicalStrategy methodologicalStrategy) {
+    public void setMethodologicalStrategy(ArrayList<String> methodologicalStrategy) {
         this.methodologicalStrategy = methodologicalStrategy;
     }
+
     
 }
 

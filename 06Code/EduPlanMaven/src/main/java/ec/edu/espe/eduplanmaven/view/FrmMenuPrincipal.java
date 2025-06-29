@@ -33,7 +33,6 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
         PmlTitle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         showTitleNamePrincipal = new javax.swing.JLabel();
@@ -46,11 +45,8 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         MnuViewPlansForTeacher = new javax.swing.JMenuItem();
         MnuIdByPlan = new javax.swing.JMenuItem();
 
-        jTextField1.setText("jTextField1");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduPlan para Director");
-        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
         jLabel1.setText("Bienvenido Director");
@@ -68,9 +64,9 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(showTitleNamePrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BtmLogout)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(31, 31, 31))
         );
         PmlTitleLayout.setVerticalGroup(
             PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,11 +85,11 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         PmlActions.setLayout(PmlActionsLayout);
         PmlActionsLayout.setHorizontalGroup(
             PmlActionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 577, Short.MAX_VALUE)
+            .addGap(0, 619, Short.MAX_VALUE)
         );
         PmlActionsLayout.setVerticalGroup(
             PmlActionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 450, Short.MAX_VALUE)
+            .addGap(0, 525, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Ver");
@@ -119,7 +115,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(PmlActions, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
+                        .addComponent(PmlActions, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,7 +133,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PmlActions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PmlActions, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -187,7 +183,6 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel showTitleNamePrincipal;
     // End of variables declaration//GEN-END:variables
 

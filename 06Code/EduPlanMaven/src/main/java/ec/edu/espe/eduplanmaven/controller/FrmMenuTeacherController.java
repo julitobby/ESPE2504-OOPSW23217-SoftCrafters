@@ -4,7 +4,7 @@ import ec.edu.espe.eduplanmaven.view.FrmMainMenu;
 import ec.edu.espe.eduplanmaven.view.FrmMenuTeacher;
 import ec.edu.espe.eduplanmaven.view.PnlCreatePlan;
 import ec.edu.espe.eduplanmaven.view.PnlFindPlan;
-import ec.edu.espe.eduplanmaven.view.PnlIdPlans;
+import ec.edu.espe.eduplanmaven.view.PnlFindPlan;
 import ec.edu.espe.eduplanmaven.view.PnlViewAllPlans;
 import ec.edu.espe.eduplanmaven.view.PnlViewByTeacher;
 import ec.edu.espe.eduplanmaven.view.PnlViewPlans;
@@ -38,7 +38,9 @@ public class FrmMenuTeacherController implements ActionListener {
         frmMenuTeacher.getBtmLogout().setActionCommand("Logout");
         frmMenuTeacher.getMnuViewAllPlans().addActionListener(this);
         frmMenuTeacher.getMnuViewAllPlans().setActionCommand("ViewPlans");
-
+        frmMenuTeacher.revalidate();
+        frmMenuTeacher.repaint();
+        frmMenuTeacher.pack();
     }
 
     public static FrmMenuTeacherController getInstance() {
@@ -60,15 +62,24 @@ public class FrmMenuTeacherController implements ActionListener {
         switch (button) {
             case "Create" -> {
                 cardLayout.show(frmMenuTeacher.getPmlActions(), "CreatePlan");
+                frmMenuTeacher.revalidate();
+                frmMenuTeacher.repaint();
+                frmMenuTeacher.pack();
                 System.out.println("a");
 
             }
             case "Find" -> {
                 cardLayout.show(frmMenuTeacher.getPmlActions(), "FindPlan");
+                frmMenuTeacher.revalidate();
+                frmMenuTeacher.repaint();
+                frmMenuTeacher.pack();
                 System.out.println("b");
             }
             case "ViewPlans" -> {
                 cardLayout.show(frmMenuTeacher.getPmlActions(), "ViewPlans");
+                frmMenuTeacher.revalidate();
+                frmMenuTeacher.repaint();
+                frmMenuTeacher.pack();
                 System.out.println("c");
             }
             case "Logout" -> {
