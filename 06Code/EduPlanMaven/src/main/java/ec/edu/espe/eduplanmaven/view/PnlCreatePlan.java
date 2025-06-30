@@ -1,5 +1,6 @@
 package ec.edu.espe.eduplanmaven.view;
 
+import com.toedter.calendar.JDateChooser;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -54,6 +55,7 @@ public class PnlCreatePlan extends javax.swing.JPanel {
         txtIntegratorElement = new javax.swing.JTextField();
         txtNamePlanification = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
+        dtcPlanificationDay = new com.toedter.calendar.JDateChooser();
         jPanel2 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -101,17 +103,17 @@ public class PnlCreatePlan extends javax.swing.JPanel {
 
         showIdPlan.setBackground(new java.awt.Color(0, 0, 0));
 
-        txtEducationalLevel.setText("jTextField1");
+        txtEducationalLevel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEducationalLevelActionPerformed(evt);
+            }
+        });
 
-        txtActivity.setText("jTextField2");
-
-        txtAgeGroup.setText("jTextField3");
-
-        txtGeneralDescription.setText("jTextField4");
-
-        txtIntegratorElement.setText("jTextField5");
-
-        txtNamePlanification.setText("jTextField6");
+        txtActivity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtActivityActionPerformed(evt);
+            }
+        });
 
         jLabel21.setText("horas");
 
@@ -125,7 +127,7 @@ public class PnlCreatePlan extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addGap(18, 18, 18)
-                        .addComponent(txtGeneralDescription)
+                        .addComponent(txtGeneralDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,14 +144,17 @@ public class PnlCreatePlan extends javax.swing.JPanel {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(showIdPlan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(txtIntegratorElement)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addComponent(cmbListTeachers2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(0, 0, Short.MAX_VALUE)))
                                         .addContainerGap())))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtNamePlanification))))
+                                .addComponent(txtNamePlanification))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(txtIntegratorElement)
+                                .addContainerGap())))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -167,7 +172,8 @@ public class PnlCreatePlan extends javax.swing.JPanel {
                                 .addComponent(SpnEstimatedTime)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel21))
-                            .addComponent(txtEducationalLevel)))))
+                            .addComponent(txtEducationalLevel)
+                            .addComponent(dtcPlanificationDay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,8 +203,10 @@ public class PnlCreatePlan extends javax.swing.JPanel {
                     .addComponent(jLabel6)
                     .addComponent(SpnEstimatedTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel7)
+                    .addComponent(dtcPlanificationDay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
@@ -225,7 +233,6 @@ public class PnlCreatePlan extends javax.swing.JPanel {
         );
 
         jLabel13.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Alcance");
 
         jLabel14.setText("Nombre del Alcance:");
@@ -238,21 +245,11 @@ public class PnlCreatePlan extends javax.swing.JPanel {
 
         btmAddScope.setText("Agregar Alcance");
 
-        txtScopeName.setText("jTextField7");
-
-        txtSkill.setText("jTextField8");
-
-        txtNewResourceMaterial.setText("jTextField9");
-
         btmAddResourceMaterial.setText("Añadir");
-
-        txtNewEvaluationIndicator.setText("jTextField10");
 
         btmAddEvaluationIndicator.setText("Añadir");
 
         jLabel20.setText("Estrategia Metodologica:");
-
-        txtStrategyMethodologic.setText("jTextField11");
 
         btmAddStrategyMethodologic.setText("Añadir");
 
@@ -378,6 +375,14 @@ public class PnlCreatePlan extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtEducationalLevelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEducationalLevelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEducationalLevelActionPerformed
+
+    private void txtActivityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtActivityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtActivityActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSpinner SpnChildNumber;
@@ -388,6 +393,7 @@ public class PnlCreatePlan extends javax.swing.JPanel {
     private javax.swing.JButton btmAddStrategyMethodologic;
     private javax.swing.JButton btmSave;
     private javax.swing.JComboBox<String> cmbListTeachers2;
+    private com.toedter.calendar.JDateChooser dtcPlanificationDay;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -593,5 +599,39 @@ public class PnlCreatePlan extends javax.swing.JPanel {
         this.btmSave = btmSave;
     }
 
+    public void setTxtNamePlanification(JTextField txtNamePlanification) {
+        this.txtNamePlanification = txtNamePlanification;
+    }
+
+    public JTextField getTxtNamePlanification() {
+        return txtNamePlanification;
+    }
+
+    public JDateChooser getDtcPlanificationDay() {
+        return dtcPlanificationDay;
+    }
+
+    public void setDtcPlanificationDay(JDateChooser dtcPlanificationDay) {
+        this.dtcPlanificationDay = dtcPlanificationDay;
+    }
+    
+    public void clearForm() {
+        txtNamePlanification.setText("");
+        txtActivity.setText("");
+        txtAgeGroup.setText("");
+        txtEducationalLevel.setText("");
+        txtGeneralDescription.setText("");
+        txtIntegratorElement.setText("");
+        txtSkill.setText("");
+        txtScopeName.setText("");
+        txtStrategyMethodologic.setText("");
+        txtNewEvaluationIndicator.setText("");
+        txtNewResourceMaterial.setText("");
+        SpnChildNumber.setValue(0);
+        SpnEstimatedTime.setValue(0);
+        cmbListTeachers2.setSelectedIndex(0);
+        showIdPlan.setText("");
+        showIdTeacher2.setText("");
+    }
 
 }

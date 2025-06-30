@@ -94,24 +94,6 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
 
         jLabel30.setText("Fecha:");
 
-        lblEducationalLevel1.setText("jLabel19");
-
-        lblActivity1.setText("jLabel20");
-
-        lblAgeGroup1.setText("jLabel21");
-
-        lblChildNumber1.setText("jLabel22");
-
-        lblEstimatedTime1.setText("jLabel23");
-
-        lblDate1.setText("jLabel24");
-
-        lblGeneralDescription1.setText("jLabel25");
-
-        lblElementIntegrate1.setText("jLabel26");
-
-        lblNamePlanification.setText("jLabel27");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -194,10 +176,7 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
         );
 
         jLabel31.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(0, 0, 0));
         jLabel31.setText("Alcances");
-
-        cmbScopes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel32.setText("Nombre del Alcance:");
 
@@ -205,36 +184,16 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
 
         jLabel34.setText("Recursos y Materiales:");
 
-        LstResourcesMaterials1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane4.setViewportView(LstResourcesMaterials1);
 
         jLabel35.setText("Indicadores de Evaluación:");
 
-        LstEvaluationIndicators1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane5.setViewportView(LstEvaluationIndicators1);
 
         jLabel36.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(0, 0, 0));
         jLabel36.setText("Estrategia Metodologica");
 
-        LstMethodologicalStrategies1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane6.setViewportView(LstMethodologicalStrategies1);
-
-        lblScopeName1.setText("jLabel30");
-
-        lblSkill1.setText("jLabel31");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -269,9 +228,9 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane5)
                                     .addComponent(jScrollPane6))))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -303,13 +262,9 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        cmbPlans1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel37.setText("Planificación:");
 
         jLabel26.setText("Id Maestro:");
-
-        lblIdTeacher1.setText("jLabel29");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

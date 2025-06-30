@@ -2,6 +2,7 @@ package ec.edu.espe.eduplanmaven.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
 *
@@ -23,9 +24,9 @@ private String namePlanification;
 private String responsibleTeacher;
 private ArrayList<Scope> scopes;
 private String idTeacher;
-private String day;
+private Date day;
 
-public Planification(String idPlanification, String namePlanification, String educationalLevel, String activityName, String ageGroup, int numberOfChildren, int estimatedTime, LocalDate date, String experienceOverview, String integratingElement, String responsibleTeacher, ArrayList<Scope> scopes, String idTeacher, String day) {
+public Planification(String idPlanification, String namePlanification, String educationalLevel, String activityName, String ageGroup, int numberOfChildren, int estimatedTime, LocalDate date, String experienceOverview, String integratingElement, String responsibleTeacher, ArrayList<Scope> scopes, String idTeacher, java.util.Date day) {
     this.idPlanification = idPlanification;
     this.educationalLevel = educationalLevel;
     this.activityName = activityName;
@@ -39,7 +40,7 @@ public Planification(String idPlanification, String namePlanification, String ed
     this.responsibleTeacher = responsibleTeacher;
     this.scopes = scopes;
     this.idTeacher = idTeacher;
-    this.day = day;
+    this.date = date;
 }
 
 public String getIdPlanification() {
@@ -138,11 +139,11 @@ public void setIdTeacher(String idTeacher) {
     this.idTeacher = idTeacher;
 }
 
-public String getDay() {
+public Date getDay() {
     return day;
 }
 
-public void setDay(String day) {
+public void setDay(Date day) {
     this.day = day;
 }
 

@@ -1,12 +1,19 @@
 package ec.edu.espe.eduplanmaven.controller;
 
+import ec.edu.espe.eduplanmaven.model.Planification;
+import ec.edu.espe.eduplanmaven.model.Scope;
 import ec.edu.espe.eduplanmaven.model.User;
+import ec.edu.espe.eduplanmaven.util.FileManagerPlanification;
 import ec.edu.espe.eduplanmaven.util.FileManagerUser;
 import ec.edu.espe.eduplanmaven.view.PnlCreatePlan;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,6 +24,12 @@ public class PnlCreatePlanController implements ActionListener, ItemListener {
     private static PnlCreatePlanController instance;
 
     private PnlCreatePlan pnlCreatePlan;
+    private ArrayList<String> estrategias = new ArrayList<>();
+    private ArrayList<String> recursos = new ArrayList<>();
+    private ArrayList<String> indicadores = new ArrayList<>();
+    ArrayList<Scope> scopes = new ArrayList<>();
+    private ArrayList<Scope> scopesTemp = new ArrayList<>();
+
 
     private PnlCreatePlanController() {
         this.pnlCreatePlan = PnlCreatePlan.getInstance();
@@ -51,23 +64,25 @@ public class PnlCreatePlanController implements ActionListener, ItemListener {
 
         switch (button) {
             case "Save" -> {
-
+                
             }
             case "AddResourceMaterial" -> {
-
+                
             }
             case "AddEvaluationIndicator" -> {
-
+                
             }
             case "AddStrategyMethodologic" -> {
+                
 
             }
             case "AddScope" -> {
+               
+                }
 
-            }
-        }
+                
     }
-
+    }
     @Override
     public void itemStateChanged(ItemEvent e) {
         if (e.getStateChange() == ItemEvent.SELECTED) {
@@ -84,5 +99,4 @@ public class PnlCreatePlanController implements ActionListener, ItemListener {
         String date = java.time.LocalDate.now().toString().replace("-", ""); // yyyyMMdd
         return "PLN" + date + randomNumber;
     }
-
 }
