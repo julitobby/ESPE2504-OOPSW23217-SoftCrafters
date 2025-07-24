@@ -117,6 +117,15 @@ public class FileManagerUser {
 
     //METHODS FROM LOGIN
     public void loginUser(String username, String password) {
+        System.out.println("=== INICIO LOGIN ===");
+        System.out.println("🔐 Intentando login con username: " + username);
+        
+        // Limpiar sesión anterior si existe
+        if (currentLoggedUser != null) {
+            System.out.println("⚠️ Limpiando sesión anterior de: " + currentLoggedUser.getUsername());
+            currentLoggedUser = null;
+        }
+        
         if (bloqueado) {
             JOptionPane.showMessageDialog(null, "Sistema bloqueado. Espere unos segundos.", "Bloqueado", JOptionPane.WARNING_MESSAGE);
             return;
@@ -132,6 +141,12 @@ public class FileManagerUser {
         } else {
             String storedPassword = userDoc.getString("password");
             String rol = userDoc.getString("rol");
+
+            System.out.println("✓ Usuario encontrado en BD:");
+            System.out.println("  - ID: " + userDoc.getString("id"));
+            System.out.println("  - Username: " + userDoc.getString("userName"));
+            System.out.println("  - Rol: " + userDoc.getString("rol"));
+            System.out.println("  - Nombre: " + userDoc.getString("firstName") + " " + userDoc.getString("lastName"));
 
             if (storedPassword.equals(password)) {
                 JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso", "Bienvenido", JOptionPane.INFORMATION_MESSAGE);
@@ -165,8 +180,8 @@ public class FileManagerUser {
                 JOptionPane.showMessageDialog(null, "Contraseña incorrecta. Intentos restantes: " + intentosRestantes, "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
         }
-
-        // 🔽 Limpieza al final del método
+        
+        // Limpieza al final del método
         FrmLogin.getInstance().getTxtUser().setText("");
         FrmLogin.getInstance().getPwdPassword().setText("");
     }

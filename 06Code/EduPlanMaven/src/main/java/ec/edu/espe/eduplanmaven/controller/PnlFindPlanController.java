@@ -1,10 +1,13 @@
 package ec.edu.espe.eduplanmaven.controller;
 
 import ec.edu.espe.eduplanmaven.model.Planification;
+import ec.edu.espe.eduplanmaven.model.User;
 import ec.edu.espe.eduplanmaven.util.FileManagerPlanification;
+import ec.edu.espe.eduplanmaven.util.FileManagerUser;
 import ec.edu.espe.eduplanmaven.view.PnlFindPlan;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,27 +39,52 @@ public class PnlFindPlanController implements ItemListener {
     }
     
     private void loadInitialData() {
-        // Obtener todas las planificaciones
-        List<Planification> allPlanifications = FileManagerPlanification.getInstance().getAllPlanifications();
+        User currentUser = FileManagerUser.getInstance().getCurrentLoggedUser();
         
-        // Cargar los IDs de planificaciones en el combobox
+        List<Planification> planifications;
+        
+        if (currentUser != null) {
+            if ("Director".equalsIgnoreCase(currentUser.getRol())) {
+                // Si es Director, mostrar todas las planificaciones
+                planifications = FileManagerPlanification.getInstance().getAllPlanifications();
+                System.out.println("PnlFindPlan - Usuario Director: " + currentUser.getId() + 
+                                 " cargando TODAS las planificaciones: " + planifications.size());
+            } else {
+                // Si es Maestro, mostrar solo sus planificaciones
+                planifications = FileManagerPlanification.getInstance().findPlanificationsByTeacher(currentUser.getId());
+                System.out.println("PnlFindPlan - Usuario Maestro: " + currentUser.getId() + 
+                                 " cargando SUS planificaciones: " + planifications.size());
+            }
+        } else {
+            planifications = new ArrayList<>();
+            System.out.println("PnlFindPlan - No hay usuario logueado, lista vacía");
+        }
+        
+        // Cargar los IDs de planificaciones en el combobox (filtradas por rol)
         pnlFindPlan.getCmbListPlanification().removeAllItems();
         pnlFindPlan.getCmbListPlanification().addItem("Seleccione una planificación");
         
-        for (Planification plan : allPlanifications) {
+        for (Planification plan : planifications) {
             pnlFindPlan.getCmbListPlanification().addItem(plan.getIdPlanification());
         }
         
         // Actualizar los paneles de visualización con las planificaciones encontradas
-        updateViewPanels(allPlanifications);
+        updateViewPanels(planifications);
     }
     
     private void updateViewPanels(List<Planification> planifications) {
-        // Actualizar PnlViewAllPlans con todas las planificaciones
+        // Ambos paneles usan exactamente las mismas planificaciones filtradas por rol
+        // que se cargan en el combobox
         PnlViewAllPlansController.getInstance().loadPlanificationsByResults(planifications);
-        
-        // Actualizar PnlViewPlans con las planificaciones del maestro logueado
         PnlViewPlansController.getInstance().loadPlanificationsByResults(planifications);
+        
+        // Debug: mostrar cuántas planificaciones se están cargando
+        User currentUser = FileManagerUser.getInstance().getCurrentLoggedUser();
+        if (currentUser != null) {
+            System.out.println("PnlFindPlan - Cargando " + planifications.size() + 
+                             " planificaciones para usuario: " + currentUser.getId() + 
+                             " (Rol: " + currentUser.getRol() + ")");
+        }
     }
     
     @Override
@@ -73,9 +101,12 @@ public class PnlFindPlanController implements ItemListener {
                         // Actualizar los campos del formulario con los datos de la planificación
                         displayPlanificationDetails(selectedPlan);
                         
-                        // También actualizar los paneles con la planificación seleccionada
+                        // Para PnlViewAllPlans: mostrar solo la planificación seleccionada
                         List<Planification> singlePlan = List.of(selectedPlan);
-                        updateViewPanels(singlePlan);
+                        PnlViewAllPlansController.getInstance().loadPlanificationsByResults(singlePlan);
+                        
+                        // Para PnlViewPlans: aplicar filtrado por rol sobre la planificación seleccionada
+                        PnlViewPlansController.getInstance().loadPlanificationsByResults(singlePlan);
                     }
                 }
             }
@@ -96,14 +127,9 @@ public class PnlFindPlanController implements ItemListener {
         pnlFindPlan.getLblTeacher().setText(plan.getResponsibleTeacher());
         pnlFindPlan.getLblIdTeacher().setText(plan.getIdTeacher());
         
-        // Cargar scopes en el combobox
-        if (plan.getScopes() != null && !plan.getScopes().isEmpty()) {
-            pnlFindPlan.getCmbScopes().removeAllItems();
-            pnlFindPlan.getCmbScopes().addItem("Seleccione un scope");
-            
-            plan.getScopes().forEach(scope -> {
-                pnlFindPlan.getCmbScopes().addItem(scope.getScopeName());
-            });
-        }
+        // Cargar scopes en el combobox - temporalmente deshabilitado para evitar errores
+        pnlFindPlan.getCmbScopes().removeAllItems();
+        pnlFindPlan.getCmbScopes().addItem("Seleccione un scope");
+        // TODO: Implementar carga de scopes cuando se arregle la conversión en FileManagerPlanification
     }
 }

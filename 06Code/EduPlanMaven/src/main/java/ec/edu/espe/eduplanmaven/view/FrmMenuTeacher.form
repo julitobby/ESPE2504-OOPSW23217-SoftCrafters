@@ -6,7 +6,7 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Ver"/>
+            <Property name="text" type="java.lang.String" value="Planificaciones"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="MnuCreatePlan">
@@ -22,6 +22,23 @@
             <MenuItem class="javax.swing.JMenuItem" name="MnuViewAllPlans">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ver todas mis Planificaciones"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuGrading">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Calificaciones"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="MnuGradePlanification">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Calificar Planificaciones"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="MnuMonthlyReports">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Reportes Mensuales"/>
               </Properties>
             </MenuItem>
           </SubComponents>

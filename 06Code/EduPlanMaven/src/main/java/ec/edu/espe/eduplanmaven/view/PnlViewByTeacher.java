@@ -51,15 +51,15 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
         lblGeneralDescription1 = new javax.swing.JLabel();
         lblElementIntegrate1 = new javax.swing.JLabel();
         lblNamePlanification = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        lblNamePlanifications = new javax.swing.JLabel();
+        lblEducationalLevel = new javax.swing.JLabel();
+        lblActivity = new javax.swing.JLabel();
+        lblAgeGroup = new javax.swing.JLabel();
+        lblNumberOfChildrens = new javax.swing.JLabel();
+        lblEstimatedTime = new javax.swing.JLabel();
+        lblDay = new javax.swing.JLabel();
+        lblDescription = new javax.swing.JLabel();
+        lblIntegratingElement = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
         cmbScopes = new javax.swing.JComboBox<>();
@@ -76,9 +76,8 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
         LstMethodologicalStrategies1 = new javax.swing.JList<>();
         lblScopeName1 = new javax.swing.JLabel();
         lblSkill1 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        lblNameScope = new javax.swing.JLabel();
+        lblSkill = new javax.swing.JLabel();
         cmbPlans1 = new javax.swing.JComboBox<>();
         jLabel37 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
@@ -106,23 +105,23 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
 
         jLabel30.setText("Fecha:");
 
-        jLabel1.setText("jLabel1");
+        lblNamePlanifications.setText("jLabel1");
 
-        jLabel2.setText("jLabel2");
+        lblEducationalLevel.setText("jLabel2");
 
-        jLabel3.setText("jLabel3");
+        lblActivity.setText("jLabel3");
 
-        jLabel4.setText("jLabel4");
+        lblAgeGroup.setText("jLabel4");
 
-        jLabel5.setText("jLabel5");
+        lblNumberOfChildrens.setText("jLabel5");
 
-        jLabel6.setText("jLabel6");
+        lblEstimatedTime.setText("jLabel6");
 
-        jLabel7.setText("jLabel7");
+        lblDay.setText("jLabel7");
 
-        jLabel8.setText("jLabel8");
+        lblDescription.setText("jLabel8");
 
-        jLabel9.setText("jLabel9");
+        lblIntegratingElement.setText("jLabel9");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -147,41 +146,41 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
                         .addGap(25, 25, 25)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
+                                .addComponent(lblIntegratingElement)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lblElementIntegrate1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
+                                        .addComponent(lblDescription)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lblGeneralDescription1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
+                                        .addComponent(lblDay)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lblDate1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
+                                        .addComponent(lblEstimatedTime)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lblEstimatedTime1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
+                                        .addComponent(lblNumberOfChildrens)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lblChildNumber1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
+                                        .addComponent(lblAgeGroup)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lblAgeGroup1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
+                                        .addComponent(lblActivity)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lblActivity1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
+                                        .addComponent(lblEducationalLevel)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lblEducationalLevel1, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
+                                        .addComponent(lblNamePlanifications)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lblNamePlanification, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addContainerGap())))))
@@ -193,47 +192,47 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
                     .addComponent(lblNamePlanification)
-                    .addComponent(jLabel1))
+                    .addComponent(lblNamePlanifications))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23)
                     .addComponent(lblEducationalLevel1)
-                    .addComponent(jLabel2))
+                    .addComponent(lblEducationalLevel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
                     .addComponent(lblActivity1)
-                    .addComponent(jLabel3))
+                    .addComponent(lblActivity))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
                     .addComponent(lblAgeGroup1)
-                    .addComponent(jLabel4))
+                    .addComponent(lblAgeGroup))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
                     .addComponent(lblChildNumber1)
-                    .addComponent(jLabel5))
+                    .addComponent(lblNumberOfChildrens))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
                     .addComponent(lblEstimatedTime1)
-                    .addComponent(jLabel6))
+                    .addComponent(lblEstimatedTime))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
                     .addComponent(lblDate1)
-                    .addComponent(jLabel7))
+                    .addComponent(lblDay))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(lblGeneralDescription1)
-                    .addComponent(jLabel8))
+                    .addComponent(lblDescription))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
                     .addComponent(lblElementIntegrate1)
-                    .addComponent(jLabel9))
+                    .addComponent(lblIntegratingElement))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -257,11 +256,9 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
 
         jScrollPane6.setViewportView(LstMethodologicalStrategies1);
 
-        jLabel10.setText("jLabel10");
+        lblNameScope.setText("jLabel10");
 
-        jLabel11.setText("jLabel11");
-
-        jLabel12.setText("jLabel12");
+        lblSkill.setText("jLabel11");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -280,10 +277,7 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
                                     .addGap(15, 15, 15)
                                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(cmbScopes, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(jPanel4Layout.createSequentialGroup()
-                                            .addComponent(jLabel34)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel12))
+                                        .addComponent(jLabel34)
                                         .addComponent(jLabel35)
                                         .addGroup(jPanel4Layout.createSequentialGroup()
                                             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -292,11 +286,11 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
                                             .addGap(12, 12, 12)
                                             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(jPanel4Layout.createSequentialGroup()
-                                                    .addComponent(jLabel10)
+                                                    .addComponent(lblNameScope)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                     .addComponent(lblScopeName1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                                 .addGroup(jPanel4Layout.createSequentialGroup()
-                                                    .addComponent(jLabel11)
+                                                    .addComponent(lblSkill)
                                                     .addGap(0, 0, Short.MAX_VALUE))))))
                                 .addGroup(jPanel4Layout.createSequentialGroup()
                                     .addGap(71, 71, 71)
@@ -323,16 +317,14 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
                     .addComponent(lblScopeName1)
-                    .addComponent(jLabel10))
+                    .addComponent(lblNameScope))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
                     .addComponent(lblSkill1)
-                    .addComponent(jLabel11))
+                    .addComponent(lblSkill))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel34)
-                    .addComponent(jLabel12))
+                .addComponent(jLabel34)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -416,12 +408,7 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cmbListTeachers1;
     private javax.swing.JComboBox<String> cmbPlans1;
     private javax.swing.JComboBox<String> cmbScopes;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -431,7 +418,6 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -440,28 +426,33 @@ public class PnlViewByTeacher extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JLabel lblActivity;
     private javax.swing.JLabel lblActivity1;
+    private javax.swing.JLabel lblAgeGroup;
     private javax.swing.JLabel lblAgeGroup1;
     private javax.swing.JLabel lblChildNumber1;
     private javax.swing.JLabel lblDate1;
+    private javax.swing.JLabel lblDay;
+    private javax.swing.JLabel lblDescription;
+    private javax.swing.JLabel lblEducationalLevel;
     private javax.swing.JLabel lblEducationalLevel1;
     private javax.swing.JLabel lblElementIntegrate1;
+    private javax.swing.JLabel lblEstimatedTime;
     private javax.swing.JLabel lblEstimatedTime1;
     private javax.swing.JLabel lblGeneralDescription1;
     private javax.swing.JLabel lblIdTeacher1;
+    private javax.swing.JLabel lblIntegratingElement;
     private javax.swing.JLabel lblNamePlanification;
+    private javax.swing.JLabel lblNamePlanifications;
+    private javax.swing.JLabel lblNameScope;
+    private javax.swing.JLabel lblNumberOfChildrens;
     private javax.swing.JLabel lblScopeName1;
+    private javax.swing.JLabel lblSkill;
     private javax.swing.JLabel lblSkill1;
     // End of variables declaration//GEN-END:variables
 

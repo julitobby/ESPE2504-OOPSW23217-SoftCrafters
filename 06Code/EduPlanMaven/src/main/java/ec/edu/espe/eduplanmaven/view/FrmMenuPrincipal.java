@@ -44,6 +44,9 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         MnuViewAllPlans = new javax.swing.JMenuItem();
         MnuViewPlansForTeacher = new javax.swing.JMenuItem();
         MnuIdByPlan = new javax.swing.JMenuItem();
+        jMenuReporting = new javax.swing.JMenu();
+        MnuMonthlyReportsDirector = new javax.swing.JMenuItem();
+        MnuTeacherPerformance = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduPlan para Director");
@@ -92,7 +95,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
             .addGap(0, 525, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Ver");
+        jMenu1.setText("Planificaciones");
 
         MnuViewAllPlans.setText("Ver todas las planificaciones");
         jMenu1.add(MnuViewAllPlans);
@@ -104,6 +107,16 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         jMenu1.add(MnuIdByPlan);
 
         jMenuBar1.add(jMenu1);
+
+        jMenuReporting.setText("Reportes y Análisis");
+
+        MnuMonthlyReportsDirector.setText("Reportes Mensuales Globales");
+        jMenuReporting.add(MnuMonthlyReportsDirector);
+
+        MnuTeacherPerformance.setText("Rendimiento por Docente");
+        jMenuReporting.add(MnuTeacherPerformance);
+
+        jMenuBar1.add(jMenuReporting);
 
         setJMenuBar(jMenuBar1);
 
@@ -177,10 +190,13 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem MnuIdByPlan;
     private javax.swing.JMenuItem MnuViewAllPlans;
     private javax.swing.JMenuItem MnuViewPlansForTeacher;
+    private javax.swing.JMenuItem MnuMonthlyReportsDirector;
+    private javax.swing.JMenuItem MnuTeacherPerformance;
     private javax.swing.JPanel PmlActions;
     private javax.swing.JPanel PmlTitle;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenuReporting;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel showTitleNamePrincipal;
@@ -233,6 +249,22 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
 
     public void setMnuIdByPlan(JMenuItem MnuIdByPlan) {
         this.MnuIdByPlan = MnuIdByPlan;
+    }
+
+    public JMenuItem getMnuMonthlyReportsDirector() {
+        return MnuMonthlyReportsDirector;
+    }
+
+    public void setMnuMonthlyReportsDirector(JMenuItem MnuMonthlyReportsDirector) {
+        this.MnuMonthlyReportsDirector = MnuMonthlyReportsDirector;
+    }
+
+    public JMenuItem getMnuTeacherPerformance() {
+        return MnuTeacherPerformance;
+    }
+
+    public void setMnuTeacherPerformance(JMenuItem MnuTeacherPerformance) {
+        this.MnuTeacherPerformance = MnuTeacherPerformance;
     }
     
     

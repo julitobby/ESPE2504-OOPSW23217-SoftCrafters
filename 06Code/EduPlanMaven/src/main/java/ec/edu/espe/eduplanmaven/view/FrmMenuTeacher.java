@@ -44,6 +44,9 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
         MnuCreatePlan = new javax.swing.JMenuItem();
         MnuFindPlan = new javax.swing.JMenuItem();
         MnuViewAllPlans = new javax.swing.JMenuItem();
+        jMenuGrading = new javax.swing.JMenu();
+        MnuGradePlanification = new javax.swing.JMenuItem();
+        MnuMonthlyReports = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EduPlan para Maestros");
@@ -91,7 +94,7 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
             .addGap(0, 533, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Ver");
+        jMenu1.setText("Planificaciones");
 
         MnuCreatePlan.setText("Crear Planificación");
         jMenu1.add(MnuCreatePlan);
@@ -103,6 +106,16 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
         jMenu1.add(MnuViewAllPlans);
 
         jMenuBar1.add(jMenu1);
+
+        jMenuGrading.setText("Calificaciones");
+
+        MnuGradePlanification.setText("Calificar Planificaciones");
+        jMenuGrading.add(MnuGradePlanification);
+
+        MnuMonthlyReports.setText("Reportes Mensuales");
+        jMenuGrading.add(MnuMonthlyReports);
+
+        jMenuBar1.add(jMenuGrading);
 
         setJMenuBar(jMenuBar1);
 
@@ -176,10 +189,13 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
     private javax.swing.JMenuItem MnuCreatePlan;
     private javax.swing.JMenuItem MnuFindPlan;
     private javax.swing.JMenuItem MnuViewAllPlans;
+    private javax.swing.JMenuItem MnuGradePlanification;
+    private javax.swing.JMenuItem MnuMonthlyReports;
     private javax.swing.JPanel PmlActions;
     private javax.swing.JPanel PmlTitle;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenuGrading;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel showTitleNameTeacher;
@@ -235,6 +251,22 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
 
     public void setPmlActions(JPanel PmlActions) {
         this.PmlActions = PmlActions;
+    }
+
+    public JMenuItem getMnuGradePlanification() {
+        return MnuGradePlanification;
+    }
+
+    public void setMnuGradePlanification(JMenuItem MnuGradePlanification) {
+        this.MnuGradePlanification = MnuGradePlanification;
+    }
+
+    public JMenuItem getMnuMonthlyReports() {
+        return MnuMonthlyReports;
+    }
+
+    public void setMnuMonthlyReports(JMenuItem MnuMonthlyReports) {
+        this.MnuMonthlyReports = MnuMonthlyReports;
     }
 
     
