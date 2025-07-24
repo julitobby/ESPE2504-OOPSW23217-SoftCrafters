@@ -2,6 +2,7 @@ package ec.edu.espe.eduplanmaven.view;
 
 import javax.swing.JList;
 import javax.swing.JScrollPane;
+import javax.swing.JTable;
 
 /**
  *
@@ -26,60 +27,89 @@ public class PnlViewAllPlans extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        LstAllPlans = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
-
-        jScrollPane1.setViewportView(LstAllPlans);
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblAllPlans = new javax.swing.JTable();
+        btnUpdateAllPlans = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
         jLabel1.setText("PLANIFICACIONES");
+
+        tblAllPlans.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(tblAllPlans);
+
+        btnUpdateAllPlans.setText("Actualizar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(169, Short.MAX_VALUE)
+                .addContainerGap(80, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(156, 156, 156))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(221, 221, 221))))
+                        .addGap(221, 221, 221))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnUpdateAllPlans)
+                        .addGap(228, 228, 228))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnUpdateAllPlans)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JList<String> LstAllPlans;
+    private javax.swing.JButton btnUpdateAllPlans;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable tblAllPlans;
     // End of variables declaration//GEN-END:variables
 
-    public JList<String> getLstAllPlans() {
-        return LstAllPlans;
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
     }
 
-    public void setLstAllPlans(JList<String> LstAllPlans) {
-        this.LstAllPlans = LstAllPlans;
+    public JTable getTblAllPlans() {
+        return tblAllPlans;
     }
 
-    public JScrollPane getjScrollPane1() {
-        return jScrollPane1;
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
     }
 
-    public void setjScrollPane1(JScrollPane jScrollPane1) {
-        this.jScrollPane1 = jScrollPane1;
+    public void setTblAllPlans(JTable tblAllPlans) {
+        this.tblAllPlans = tblAllPlans;
     }
+
+    public javax.swing.JButton getBtnUpdateAllPlans() {
+        return btnUpdateAllPlans;
+    }
+
+    public void setBtnUpdateAllPlans(javax.swing.JButton btnUpdateAllPlans) {
+        this.btnUpdateAllPlans = btnUpdateAllPlans;
+    }
+
 }

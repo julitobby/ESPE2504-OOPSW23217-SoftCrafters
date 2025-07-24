@@ -25,6 +25,7 @@ public class FileManagerUser {
     private final MongoCollection<Document> collection;
     private int intentosRestantes = 3;
     private boolean bloqueado = false;
+    private User currentLoggedUser = null;
 
     private FileManagerUser() {
         collection = MongoClientConnection.getInstance().getDatabase().getCollection("users");
@@ -137,6 +138,16 @@ public class FileManagerUser {
                 intentosRestantes = 3;
                 bloqueado = false;
 
+                // Crear objeto User con los datos del usuario logueado
+                currentLoggedUser = new User(
+                    userDoc.getString("id"),
+                    userDoc.getString("firstName"),
+                    userDoc.getString("lastName"),
+                    userDoc.getString("userName"),
+                    userDoc.getString("password"),
+                    userDoc.getString("rol")
+                );
+
                 if ("Maestro".equalsIgnoreCase(rol)) {
                     FrmMenuTeacher.getInstance().getShowTitleNameTeacher().setText(userDoc.getString("lastName") + " " + userDoc.getString("firstName"));
                     FrmMenuTeacherController.getInstance().showLMenuTeacher();
@@ -207,6 +218,16 @@ public class FileManagerUser {
                 teacherDoc.getString("rol")
         );
 
+    }
+
+    // Método para obtener el usuario logueado actualmente
+    public User getCurrentLoggedUser() {
+        return currentLoggedUser;
+    }
+
+    // Método para limpiar la sesión
+    public void logout() {
+        currentLoggedUser = null;
     }
 
 }

@@ -4,6 +4,7 @@ import ec.edu.espe.eduplanmaven.view.FrmMainMenu;
 import ec.edu.espe.eduplanmaven.view.FrmMenuTeacher;
 import ec.edu.espe.eduplanmaven.view.PnlCreatePlan;
 import ec.edu.espe.eduplanmaven.view.PnlFindPlan;
+import ec.edu.espe.eduplanmaven.view.PnlViewAllPlans;
 import ec.edu.espe.eduplanmaven.view.PnlViewPlans;
 import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
@@ -20,12 +21,13 @@ public class FrmMenuTeacherController implements ActionListener {
     private FrmMenuTeacher frmMenuTeacher;
 
     private FrmMenuTeacherController() {
-        this.frmMenuTeacher = frmMenuTeacher.getInstance();
+        this.frmMenuTeacher = FrmMenuTeacher.getInstance();
 
         frmMenuTeacher.getPmlActions().setLayout(new CardLayout());
         frmMenuTeacher.getPmlActions().add(PnlCreatePlan.getInstance(), "CreatePlan");
         frmMenuTeacher.getPmlActions().add(PnlFindPlan.getInstance(), "FindPlan");
         frmMenuTeacher.getPmlActions().add(PnlViewPlans.getInstance(), "ViewPlans");
+        frmMenuTeacher.getPmlActions().add(PnlViewAllPlans.getInstance(), "ViewAllPlans");
 
         frmMenuTeacher.getMnuCreatePlan().addActionListener(this);
         frmMenuTeacher.getMnuCreatePlan().setActionCommand("Create");
@@ -35,6 +37,13 @@ public class FrmMenuTeacherController implements ActionListener {
         frmMenuTeacher.getBtmLogout().setActionCommand("Logout");
         frmMenuTeacher.getMnuViewAllPlans().addActionListener(this);
         frmMenuTeacher.getMnuViewAllPlans().setActionCommand("ViewPlans");
+        
+        // Verificar si hay otro botón para ver todas las planificaciones
+        if (frmMenuTeacher.getMnuViewAllPlans() != null) {
+            frmMenuTeacher.getMnuViewAllPlans().addActionListener(this);
+            frmMenuTeacher.getMnuViewAllPlans().setActionCommand("ViewAllPlans");
+        }
+        
         frmMenuTeacher.revalidate();
         frmMenuTeacher.repaint();
         frmMenuTeacher.pack();
@@ -73,7 +82,7 @@ public class FrmMenuTeacherController implements ActionListener {
                 frmMenuTeacher.revalidate();
                 frmMenuTeacher.repaint();
                 frmMenuTeacher.pack();
-                
+                PnlFindPlanController.getInstance(); // Inicializar controlador que carga automáticamente
                 System.out.println("b");
             }
             case "ViewPlans" -> {
@@ -81,7 +90,16 @@ public class FrmMenuTeacherController implements ActionListener {
                 frmMenuTeacher.revalidate();
                 frmMenuTeacher.repaint();
                 frmMenuTeacher.pack();
+                PnlViewPlansController.getInstance(); // Inicializar controlador que carga automáticamente
                 System.out.println("c");
+            }
+            case "ViewAllPlans" -> {
+                cardLayout.show(frmMenuTeacher.getPmlActions(), "ViewAllPlans");
+                frmMenuTeacher.revalidate();
+                frmMenuTeacher.repaint();
+                frmMenuTeacher.pack();
+                PnlViewAllPlansController.getInstance(); // Inicializar controlador que carga automáticamente
+                System.out.println("d");
             }
             case "Logout" -> {
                 frmMenuTeacher.setVisible(false);
