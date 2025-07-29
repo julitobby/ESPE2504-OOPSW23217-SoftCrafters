@@ -15,7 +15,7 @@ public class FrmLoginController implements ActionListener {
     private static FrmLoginController instance;
 
     private FrmLogin frmLogin;
-
+    
     private FrmLoginController() {
         this.frmLogin = FrmLogin.getInstance();
 

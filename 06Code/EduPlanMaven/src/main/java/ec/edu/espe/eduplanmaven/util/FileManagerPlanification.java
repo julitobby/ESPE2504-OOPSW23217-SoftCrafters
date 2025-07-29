@@ -74,6 +74,20 @@ public class FileManagerPlanification {
         
         return result;
     }
+/* my soluccion of see planificacion only professor 
+    
+    public static List<Planification> getPlansByTeacherId(String teacherId) {
+        List<Planification> allPlans = readFromFile(); // Este es el método actual que lee todas
+        List<Planification> teacherPlans = new ArrayList<>();
+
+        for (Planification plan : allPlans) {
+            if (plan.getTeacherId().equals(teacherId)) {
+                teacherPlans.add(plan);
+            }
+        }
+
+    return teacherPlans;
+    */
 
     // Actualizar planificación (por ID)
     public boolean updatePlanification(Planification plan) {

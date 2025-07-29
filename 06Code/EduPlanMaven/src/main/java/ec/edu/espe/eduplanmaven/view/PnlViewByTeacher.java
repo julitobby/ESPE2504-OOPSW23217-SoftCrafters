@@ -10,12 +10,24 @@ import javax.swing.JScrollPane;
  *
  * @author David Bonilla SoftCrafters ESPE
  */
+/* 
+int idProfesor = SessionManager.getTeacherId();
+for (int i = 0; i < cmbListTeachers1.getItemCount(); i++) {
+    Object item = cmbListTeachers1.getItemAt(i);
+    if (item.toString().contains(String.valueOf(idProfesor))) {
+        cmbListTeachers1.setSelectedIndex(i);
+        break;
+    }
+}
+*/
 public class PnlViewByTeacher extends javax.swing.JPanel {
 
     private static PnlViewByTeacher instance;
 
     private PnlViewByTeacher() {
+        
         initComponents();
+
     }
 
     public static PnlViewByTeacher getInstance() {

@@ -11,6 +11,10 @@ import javax.swing.JTable;
 public class PnlViewPlans extends javax.swing.JPanel {
 
     private static PnlViewPlans instance;
+/* 
+    String teacherId = currentUser.getId();
+    List<Planification> plans = FileManagerPlanification.getPlansByTeacherId(teacherId);
+    */
 
     private PnlViewPlans() {
         initComponents();
