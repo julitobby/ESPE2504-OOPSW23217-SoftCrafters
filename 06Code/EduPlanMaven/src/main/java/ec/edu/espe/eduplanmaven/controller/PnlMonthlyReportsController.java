@@ -108,8 +108,8 @@ public class PnlMonthlyReportsController implements ActionListener {
             panel.getLblMonthlyAverage().setText("Promedio Mensual: No hay datos");
             panel.getLblPerformanceLevel().setText("Nivel de Desempeño: N/A");
             panel.getLblCompletionStatus().setText("Estado: Sin planificaciones");
-            panel.getProgressBar().setValue(0);
-            panel.getProgressBar().setString("0%");
+            panel.getprgMonthlyProgress().setValue(0);
+            panel.getprgMonthlyProgress().setString("0%");
             panel.getTxtSummary().setText(String.format(
                 "No se encontraron planificaciones para %s %s.\n\n" +
                 "Asegúrese de que:\n" +
@@ -127,8 +127,8 @@ public class PnlMonthlyReportsController implements ActionListener {
         
         // Update progress bar
         double completion = report.getCompletionPercentage();
-        panel.getProgressBar().setValue((int) completion);
-        panel.getProgressBar().setString(String.format("%.0f%%", completion));
+        panel.getprgMonthlyProgress().setValue((int) completion);
+        panel.getprgMonthlyProgress().setString(String.format("%.0f%%", completion));
         
         // Populate table
         for (Planification plan : report.getPlanifications()) {
@@ -196,8 +196,8 @@ public class PnlMonthlyReportsController implements ActionListener {
         panel.getLblMonthlyAverage().setText("Promedio Mensual: --");
         panel.getLblPerformanceLevel().setText("Nivel de Desempeño: --");
         panel.getLblCompletionStatus().setText("Estado de Completitud: --");
-        panel.getProgressBar().setValue(0);
-        panel.getProgressBar().setString("0%");
+        panel.getprgMonthlyProgress().setValue(0);
+        panel.getprgMonthlyProgress().setString("0%");
         panel.getTxtSummary().setText("Seleccione un mes y año para generar el reporte");
     }
 }

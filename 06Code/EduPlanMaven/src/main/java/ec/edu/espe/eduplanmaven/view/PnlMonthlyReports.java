@@ -20,6 +20,9 @@
  */
 package ec.edu.espe.eduplanmaven.view;
 
+import javax.swing.JLabel;
+import javax.swing.JProgressBar;
+import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -268,4 +271,77 @@ public class PnlMonthlyReports extends javax.swing.JPanel {
     public javax.swing.JProgressBar getprgMonthlyProgress() {
         return prgMonthlyProgress;
     }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JLabel getLblProgressTitle() {
+        return lblProgressTitle;
+    }
+
+    public void setLblProgressTitle(JLabel lblProgressTitle) {
+        this.lblProgressTitle = lblProgressTitle;
+    }
+
+    public JLabel getLblSelectPeriod() {
+        return lblSelectPeriod;
+    }
+
+    public void setLblSelectPeriod(JLabel lblSelectPeriod) {
+        this.lblSelectPeriod = lblSelectPeriod;
+    }
+
+    public JLabel getLblStatistics() {
+        return lblStatistics;
+    }
+
+    public void setLblStatistics(JLabel lblStatistics) {
+        this.lblStatistics = lblStatistics;
+    }
+
+    public JLabel getLblSummaryTitle() {
+        return lblSummaryTitle;
+    }
+
+    public void setLblSummaryTitle(JLabel lblSummaryTitle) {
+        this.lblSummaryTitle = lblSummaryTitle;
+    }
+
+    public JLabel getLblTableTitle() {
+        return lblTableTitle;
+    }
+
+    public void setLblTableTitle(JLabel lblTableTitle) {
+        this.lblTableTitle = lblTableTitle;
+    }
+
+    public JLabel getLblTitle() {
+        return lblTitle;
+    }
+
+    public void setLblTitle(JLabel lblTitle) {
+        this.lblTitle = lblTitle;
+    }
+
+    public JProgressBar getPrgMonthlyProgress() {
+        return prgMonthlyProgress;
+    }
+
+    public void setPrgMonthlyProgress(JProgressBar prgMonthlyProgress) {
+        this.prgMonthlyProgress = prgMonthlyProgress;
+    }
+    
 }

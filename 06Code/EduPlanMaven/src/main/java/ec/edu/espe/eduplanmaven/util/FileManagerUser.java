@@ -1,7 +1,6 @@
 package ec.edu.espe.eduplanmaven.util;
 
 import com.mongodb.client.MongoCollection;
-import ec.edu.espe.eduplanmaven.controller.FrmLoginController;
 import ec.edu.espe.eduplanmaven.controller.FrmMenuPrincipalController;
 import ec.edu.espe.eduplanmaven.controller.FrmMenuTeacherController;
 import ec.edu.espe.eduplanmaven.model.User;
@@ -9,9 +8,6 @@ import ec.edu.espe.eduplanmaven.view.FrmLogin;
 import ec.edu.espe.eduplanmaven.view.FrmMenuPrincipal;
 import ec.edu.espe.eduplanmaven.view.FrmMenuTeacher;
 import ec.edu.espe.eduplanmaven.view.FrmRegister;
-import java.awt.HeadlessException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -117,12 +113,9 @@ public class FileManagerUser {
 
     //METHODS FROM LOGIN
     public void loginUser(String username, String password) {
-        System.out.println("=== INICIO LOGIN ===");
-        System.out.println("🔐 Intentando login con username: " + username);
         
         // Limpiar sesión anterior si existe
         if (currentLoggedUser != null) {
-            System.out.println("⚠️ Limpiando sesión anterior de: " + currentLoggedUser.getUsername());
             currentLoggedUser = null;
         }
         
