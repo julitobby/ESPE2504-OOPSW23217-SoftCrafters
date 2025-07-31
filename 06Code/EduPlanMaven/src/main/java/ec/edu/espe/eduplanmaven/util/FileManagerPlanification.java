@@ -5,17 +5,17 @@ import com.mongodb.client.model.Filters;
 import ec.edu.espe.eduplanmaven.model.Planification;
 import ec.edu.espe.eduplanmaven.model.Scope;
 import java.time.LocalDate;
-import java.time.temporal.WeekFields;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.Calendar;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
 public class FileManagerPlanification {
 
+    //SRP, only do the CRUD, no more
+    
     private static FileManagerPlanification instance;
     private final MongoCollection<Document> collection;
 
@@ -74,22 +74,7 @@ public class FileManagerPlanification {
         
         return result;
     }
-/* my soluccion of see planificacion only professor 
-    
-    public static List<Planification> getPlansByTeacherId(String teacherId) {
-        List<Planification> allPlans = readFromFile(); // Este es el método actual que lee todas
-        List<Planification> teacherPlans = new ArrayList<>();
 
-        for (Planification plan : allPlans) {
-            if (plan.getTeacherId().equals(teacherId)) {
-                teacherPlans.add(plan);
-            }
-        }
-
-    return teacherPlans;
-    */
-
-    // Actualizar planificación (por ID)
     public boolean updatePlanification(Planification plan) {
         try {
             Bson filter = Filters.eq("idPlanification", plan.getIdPlanification()); // Corregido

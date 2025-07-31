@@ -10,6 +10,8 @@ import javax.swing.JTextField;
  */
 public class FrmLogin extends javax.swing.JFrame {
 
+    //SINGLETON
+    
     private static FrmLogin instance;
 
     private FrmLogin() {

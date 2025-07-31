@@ -7,12 +7,11 @@ import com.mongodb.ServerApiVersion;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.MongoIterable;
-import java.util.List;
-import javax.swing.JOptionPane;
 
 public class MongoClientConnection {
 
+    //OPEN/CLOSE, we can only use it, but not modify it
+    
     private static MongoClientConnection instance;
     private final MongoClient mongoClient;
     private final MongoDatabase database;
@@ -32,22 +31,6 @@ public class MongoClientConnection {
         mongoClient = MongoClients.create(settings);
         database = mongoClient.getDatabase("EduPlanDB");
     }
-   /*public MongoClient CrearConnection(){
-        MongoClient mongo = null;
-        String host="localhost";
-        Integer port = 27017;
-      
-        try {
-            mongo = new MongoClient("localhost", 27017);
-            
-            MongoIterable<String>DataBasesNames = mongo.listDatabaseNames();
-            
-            JOptionPane.showMessageDialog(null, );
-        } catch (Exception error) {
-            JOptionPane.showMessageDialog(null, "Error in connection to MongoDB" + error.toString());
-        }
-        return null;
-    }*/ 
 
     public static synchronized MongoClientConnection getInstance() {
         
