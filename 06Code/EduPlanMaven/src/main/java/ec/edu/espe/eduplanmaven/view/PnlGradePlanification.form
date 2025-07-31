@@ -13,326 +13,70 @@
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
-  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                  <Component id="progressCompletion" alignment="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="cmbPendingPlans" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="sliderGrade" pref="320" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblGradeValue" min="-2" pref="60" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnGrade" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnCancel" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="lblCompletionText" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="cmbPendingPlans" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="sliderGrade" max="32767" attributes="0"/>
+                  <Component id="lblGradeValue" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="120" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnGrade" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="lblCompletionText" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="progressCompletion" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="20" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="pnlTitle">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-            <EmptyBorder bottom="20" left="20" right="20" top="20"/>
-          </Border>
-        </Property>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-          <BorderConstraints direction="North"/>
-        </Constraint>
-      </Constraints>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblTitle">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="18" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Calificar Planificaciones"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="pnlMain">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-            <EmptyBorder bottom="20" left="20" right="20" top="0"/>
-          </Border>
-        </Property>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-          <BorderConstraints direction="Center"/>
-        </Constraint>
-      </Constraints>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-        <Property name="columns" type="int" value="2"/>
-        <Property name="horizontalGap" type="int" value="30"/>
-        <Property name="rows" type="int" value="1"/>
-      </Layout>
-      <SubComponents>
-        <Container class="javax.swing.JPanel" name="pnlLeft">
-          <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Calificación"/>
-              </Border>
-            </Property>
-          </Properties>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="lblSelectPlanification">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Seleccionar Planificación:"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="0" gridwidth="2" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="5" insetsRight="10" anchor="17" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cmbPlanifications">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="1">
-                    <StringItem index="0" value="Seleccione una planificación..."/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="1" gridwidth="2" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="15" insetsRight="10" anchor="10" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblGrading">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Calificación (1-100):"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="2" gridwidth="2" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="5" insetsRight="10" anchor="17" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblGradeValue">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Valor: 50"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="3" gridwidth="2" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="5" insetsRight="10" anchor="10" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JSlider" name="sldGrade">
-              <Properties>
-                <Property name="maximum" type="int" value="100"/>
-                <Property name="minimum" type="int" value="1"/>
-                <Property name="value" type="int" value="50"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="4" gridwidth="2" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="15" insetsRight="10" anchor="10" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblWeekOfMonth">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Semana del Mes:"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="5" gridwidth="2" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="5" insetsRight="10" anchor="17" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cmbWeekOfMonth">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Semana 1"/>
-                    <StringItem index="1" value="Semana 2"/>
-                    <StringItem index="2" value="Semana 3"/>
-                    <StringItem index="3" value="Semana 4"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="6" gridwidth="2" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="10" insetsRight="10" anchor="10" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cmbMonth">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="12">
-                    <StringItem index="0" value="Enero"/>
-                    <StringItem index="1" value="Febrero"/>
-                    <StringItem index="2" value="Marzo"/>
-                    <StringItem index="3" value="Abril"/>
-                    <StringItem index="4" value="Mayo"/>
-                    <StringItem index="5" value="Junio"/>
-                    <StringItem index="6" value="Julio"/>
-                    <StringItem index="7" value="Agosto"/>
-                    <StringItem index="8" value="Septiembre"/>
-                    <StringItem index="9" value="Octubre"/>
-                    <StringItem index="10" value="Noviembre"/>
-                    <StringItem index="11" value="Diciembre"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="7" gridwidth="1" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="10" insetsRight="5" anchor="10" weightx="0.6" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cmbYear">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="5">
-                    <StringItem index="0" value="2024"/>
-                    <StringItem index="1" value="2025"/>
-                    <StringItem index="2" value="2026"/>
-                    <StringItem index="3" value="2027"/>
-                    <StringItem index="4" value="2028"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="1" gridy="7" gridwidth="1" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="5" insetsBottom="10" insetsRight="10" anchor="10" weightx="0.4" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnSaveGrade">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="0" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Arial" size="12" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Guardar Calificación"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="8" gridwidth="2" gridheight="1" fill="2" ipadx="0" ipady="5" insetsTop="15" insetsLeft="10" insetsBottom="10" insetsRight="10" anchor="10" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="pnlRight">
-          <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Estado y Progreso"/>
-              </Border>
-            </Property>
-          </Properties>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="lblCurrentStatus">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Estado Actual"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="0" gridwidth="1" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="10" insetsLeft="10" insetsBottom="10" insetsRight="10" anchor="17" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblProgress">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Progreso de Calificaciones:"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="1" gridwidth="1" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="5" insetsRight="10" anchor="17" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JProgressBar" name="prgGradingProgress">
-              <Properties>
-                <Property name="stringPainted" type="boolean" value="true"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="2" gridwidth="1" gridheight="1" fill="2" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="15" insetsRight="10" anchor="10" weightx="1.0" weighty="0.0"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridx="0" gridy="3" gridwidth="1" gridheight="1" fill="1" ipadx="0" ipady="0" insetsTop="5" insetsLeft="10" insetsBottom="10" insetsRight="10" anchor="10" weightx="1.0" weighty="1.0"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTextArea" name="txtStatus">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="f0" green="f0" red="f0" type="rgb"/>
-                    </Property>
-                    <Property name="columns" type="int" value="20"/>
-                    <Property name="editable" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Monospaced" size="12" style="0"/>
-                    </Property>
-                    <Property name="rows" type="int" value="8"/>
-                    <Property name="text" type="java.lang.String" value="Información sobre el estado de las calificaciones aparecerá aquí..."/>
-                    <Property name="wrapStyleWord" type="boolean" value="true"/>
-                    <Property name="lineWrap" type="boolean" value="true"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
-      </SubComponents>
-    </Container>
-  </SubComponents>
-</Form>
-  <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblTitle">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="18" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Calificar Planificaciones"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblSelectPlanification">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Seleccionar Planificación:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="cmbPlanifications">
+    <Component class="javax.swing.JComboBox" name="cmbPendingPlans">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="1">
-            <StringItem index="0" value="Seleccione una planificación..."/>
+            <StringItem index="0" value="Seleccione una planificación pendiente"/>
           </StringArray>
         </Property>
       </Properties>
@@ -340,104 +84,28 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblGrading">
+    <Component class="javax.swing.JSlider" name="sliderGrade">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Calificación (1-100):"/>
+        <Property name="majorTickSpacing" type="int" value="20"/>
+        <Property name="maximum" type="int" value="100"/>
+        <Property name="minimum" type="int" value="1"/>
+        <Property name="minorTickSpacing" type="int" value="5"/>
+        <Property name="paintLabels" type="boolean" value="true"/>
+        <Property name="paintTicks" type="boolean" value="true"/>
+        <Property name="value" type="int" value="80"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblGradeValue">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Valor: 50"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JSlider" name="sldGrade">
-      <Properties>
-        <Property name="maximum" type="int" value="100"/>
-        <Property name="minimum" type="int" value="1"/>
-        <Property name="value" type="int" value="50"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblWeekOfMonth">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Semana del Mes:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="cmbWeekOfMonth">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Semana 1"/>
-            <StringItem index="1" value="Semana 2"/>
-            <StringItem index="2" value="Semana 3"/>
-            <StringItem index="3" value="Semana 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="cmbMonth">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="12">
-            <StringItem index="0" value="Enero"/>
-            <StringItem index="1" value="Febrero"/>
-            <StringItem index="2" value="Marzo"/>
-            <StringItem index="3" value="Abril"/>
-            <StringItem index="4" value="Mayo"/>
-            <StringItem index="5" value="Junio"/>
-            <StringItem index="6" value="Julio"/>
-            <StringItem index="7" value="Agosto"/>
-            <StringItem index="8" value="Septiembre"/>
-            <StringItem index="9" value="Octubre"/>
-            <StringItem index="10" value="Noviembre"/>
-            <StringItem index="11" value="Diciembre"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="cmbYear">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="5">
-            <StringItem index="0" value="2024"/>
-            <StringItem index="1" value="2025"/>
-            <StringItem index="2" value="2026"/>
-            <StringItem index="3" value="2027"/>
-            <StringItem index="4" value="2028"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnSaveGrade">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Guardar Calificación"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblCurrentStatus">
-      <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Arial" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Estado Actual"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="80"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblProgress">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Progreso de Calificaciones:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="prgGradingProgress">
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
@@ -446,14 +114,53 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="txtStatus">
+        <Component class="javax.swing.JTextArea" name="txtPlanDetails">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f0" green="f0" red="f0" type="rgb"/>
+            </Property>
             <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="8"/>
-            <Property name="text" type="java.lang.String" value="Información sobre el estado de las calificaciones aparecerá aquí..."/>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="Seleccione una planificación para ver los detalles"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="btnGrade">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="ff" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="12" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Calificar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCancel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="ff" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JProgressBar" name="progressCompletion">
+      <Properties>
+        <Property name="stringPainted" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCompletionText">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Progreso de calificaciones del mes:"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

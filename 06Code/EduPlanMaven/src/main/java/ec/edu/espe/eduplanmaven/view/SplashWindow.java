@@ -1,8 +1,7 @@
 package ec.edu.espe.eduplanmaven.view;
 
-import ec.edu.espe.eduplanmaven.util.MongoClientConnection;
+import ec.edu.espe.eduplanmaven.controller.SplashController;
 import java.awt.Color;
-import javax.swing.Timer;
 
 /**
  *
@@ -10,21 +9,18 @@ import javax.swing.Timer;
  */
 public class SplashWindow extends javax.swing.JFrame {
 
+    private SplashController controller;
+
     public SplashWindow() {
         initComponents();
-        //Aqui se inicia la base de datos, aqui un status bar para la coneccion
-        MongoClientConnection.getInstance();
         this.setLocationRelativeTo(null);
         getContentPane().setBackground(new Color(51, 51, 51));
-        //Timer 2 seconds
-        Timer timer = new Timer(2000, e -> {
-            dispose();
-        });
-        timer.setRepeats(false);
-        timer.start();
+        
+        // Inicializar el controlador y comenzar la conexión
+        controller = new SplashController(this);
+        controller.startDatabaseConnection();
     }
 
-    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -33,6 +29,7 @@ public class SplashWindow extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        pgrLoadConection = new javax.swing.JProgressBar();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,43 +51,42 @@ public class SplashWindow extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText(" Eduplanv2.0");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\david\\Documents\\GitHub - University\\ESPE2504-OOPSW23217-SoftCrafters\\06Code\\EduPlanMaven\\src\\main\\java\\ec\\edu\\espe\\eduplanmaven\\resources\\logo.png")); // NOI18N
-
         javax.swing.GroupLayout PmlTextLayout = new javax.swing.GroupLayout(PmlText);
         PmlText.setLayout(PmlTextLayout);
         PmlTextLayout.setHorizontalGroup(
             PmlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PmlTextLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlTextLayout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(PmlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlTextLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel3)
-                        .addGap(27, 27, 27))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlTextLayout.createSequentialGroup()
+                        .addGap(0, 51, Short.MAX_VALUE)
                         .addComponent(jLabel1)
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PmlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(pgrLoadConection, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(43, 43, 43))))
         );
         PmlTextLayout.setVerticalGroup(
             PmlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PmlTextLayout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
-                .addGroup(PmlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlTextLayout.createSequentialGroup()
+                .addGroup(PmlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PmlTextLayout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addGap(38, 38, 38))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlTextLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18))
+                        .addGap(18, 18, 18)
+                        .addComponent(pgrLoadConection, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(PmlTextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addContainerGap())
         );
 
         jLabel4.setBackground(new java.awt.Color(204, 204, 204));
@@ -164,5 +160,11 @@ public class SplashWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JProgressBar pgrLoadConection;
     // End of variables declaration//GEN-END:variables
+    
+    // Getter para el controlador
+    public javax.swing.JProgressBar getPgrLoadConection() {
+        return pgrLoadConection;
+    }
 }
