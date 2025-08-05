@@ -1,5 +1,6 @@
 package ec.edu.espe.eduplanmaven.view;
 
+import javax.swing.JComboBox;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -9,6 +10,7 @@ import javax.swing.JTable;
  * @author David Bonilla SoftCrafters ESPE
  */
 public class PnlViewAllPlans extends javax.swing.JPanel {
+    
 
     private static PnlViewAllPlans instance;
 
@@ -31,6 +33,7 @@ public class PnlViewAllPlans extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblAllPlans = new javax.swing.JTable();
         btnUpdateAllPlans = new javax.swing.JButton();
+        cmbPlans2 = new javax.swing.JComboBox<>();
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
         jLabel1.setText("PLANIFICACIONES");
@@ -55,17 +58,21 @@ public class PnlViewAllPlans extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
+                .addContainerGap(304, Short.MAX_VALUE)
+                .addComponent(btnUpdateAllPlans)
+                .addGap(228, 228, 228))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(221, 221, 221))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnUpdateAllPlans)
-                        .addGap(228, 228, 228))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cmbPlans2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -73,7 +80,9 @@ public class PnlViewAllPlans extends javax.swing.JPanel {
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbPlans2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnUpdateAllPlans)
                 .addContainerGap(16, Short.MAX_VALUE))
@@ -83,6 +92,7 @@ public class PnlViewAllPlans extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnUpdateAllPlans;
+    private javax.swing.JComboBox<String> cmbPlans2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblAllPlans;
@@ -111,5 +121,12 @@ public class PnlViewAllPlans extends javax.swing.JPanel {
     public void setBtnUpdateAllPlans(javax.swing.JButton btnUpdateAllPlans) {
         this.btnUpdateAllPlans = btnUpdateAllPlans;
     }
+    public JComboBox<String> getCmbPlans2() {
+        return cmbPlans2;
+    }
 
+    public void setCmbPlans2(JComboBox<String> cmbPlans2) {
+        this.cmbPlans2 = cmbPlans2;
+    }
+    
 }

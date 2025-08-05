@@ -136,5 +136,8 @@ public class FrmMenuTeacherController implements ActionListener {
         }
 
     }
+    public class CreateWord {
+    }
+    
 
 }

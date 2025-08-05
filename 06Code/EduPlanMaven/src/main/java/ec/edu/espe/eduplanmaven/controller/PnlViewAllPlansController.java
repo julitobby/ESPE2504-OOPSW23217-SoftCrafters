@@ -2,6 +2,7 @@ package ec.edu.espe.eduplanmaven.controller;
 
 import ec.edu.espe.eduplanmaven.model.Planification;
 import ec.edu.espe.eduplanmaven.util.FileManagerPlanification;
+import ec.edu.espe.eduplanmaven.view.PnlFindPlan;
 import ec.edu.espe.eduplanmaven.view.PnlViewAllPlans;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,12 +18,15 @@ public class PnlViewAllPlansController implements ActionListener {
     private static PnlViewAllPlansController instance;
     
     private PnlViewAllPlans pnlViewAllPlans;
+    
 
     private PnlViewAllPlansController() {
+       //pnlFindPlan.getCmbListPlanification().addItem(plan.getIdPlanification());//////////////^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         this.pnlViewAllPlans = PnlViewAllPlans.getInstance();
         setupTable();
         setupEventListeners();
         loadAllPlanifications(); // Carga automática al inicializar
+       // PnlFindPlanController.getInstance();//////////////^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     }
     
     public static PnlViewAllPlansController getInstance() {

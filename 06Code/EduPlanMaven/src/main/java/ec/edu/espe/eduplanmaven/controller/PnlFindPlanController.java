@@ -27,7 +27,7 @@ public class PnlFindPlanController implements ItemListener {
         pnlFindPlan.getCmbListPlanification().addItemListener(this);
         pnlFindPlan.getCmbScopes().addItemListener(this);
         
-        // Cargar automáticamente todas las planificaciones al inicializar
+        // Cargar automáticamente todas las planificaciones al 
         loadInitialData();
     }
     

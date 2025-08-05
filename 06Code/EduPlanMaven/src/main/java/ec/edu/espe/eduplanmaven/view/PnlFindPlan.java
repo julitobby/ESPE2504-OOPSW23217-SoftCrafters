@@ -14,7 +14,7 @@ public class PnlFindPlan extends javax.swing.JPanel {
 
     private static PnlFindPlan instance;
 
-    private PnlFindPlan() {
+    PnlFindPlan() {
         initComponents();
     }
 
