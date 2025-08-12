@@ -60,7 +60,6 @@ public class SplashController {
                     return true;
                     
                 } catch (Exception e) {
-                    System.err.println("Error al conectar con la base de datos: " + e.getMessage());
                     return false;
                 }
             }
@@ -85,18 +84,23 @@ public class SplashController {
                     } else {
                         splashWindow.getPgrLoadConection().setString("Error en la conexión");
                         // En caso de error, cerrar después de mostrar el mensaje
-                        Timer closeTimer = new Timer(2000, event -> {
-                            splashWindow.dispose();
+                        Timer closeTimer = new Timer(2000, new java.awt.event.ActionListener() {
+                            @Override
+                            public void actionPerformed(java.awt.event.ActionEvent e) {
+                                splashWindow.dispose();
+                            }
                         });
                         closeTimer.setRepeats(false);
                         closeTimer.start();
                     }
                 } catch (Exception e) {
-                    System.err.println("Error en el proceso de conexión: " + e.getMessage());
                     splashWindow.getPgrLoadConection().setString("Error inesperado");
                     // En caso de error inesperado, cerrar después de un momento
-                    Timer closeTimer = new Timer(2000, event -> {
-                        splashWindow.dispose();
+                    Timer closeTimer = new Timer(2000, new java.awt.event.ActionListener() {
+                        @Override
+                        public void actionPerformed(java.awt.event.ActionEvent e) {
+                            splashWindow.dispose();
+                        }
                     });
                     closeTimer.setRepeats(false);
                     closeTimer.start();
@@ -143,7 +147,6 @@ public class SplashController {
                 // Cerrar la ventana splash inmediatamente después
                 splashWindow.dispose();
             } catch (Exception e) {
-                System.err.println("Error al abrir el menú principal: " + e.getMessage());
                 // Si hay error, cerrar el splash de todas formas
                 splashWindow.dispose();
             }

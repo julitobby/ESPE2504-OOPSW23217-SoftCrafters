@@ -3,7 +3,6 @@ package ec.edu.espe.eduplanmaven.controller;
 import ec.edu.espe.eduplanmaven.model.Planification;
 import ec.edu.espe.eduplanmaven.model.User;
 import ec.edu.espe.eduplanmaven.util.FileManagerUser;
-import ec.edu.espe.eduplanmaven.util.FileManagerPlanification;
 import ec.edu.espe.eduplanmaven.util.GradingService;
 import ec.edu.espe.eduplanmaven.view.PnlGradePlanification;
 import javax.swing.*;
@@ -66,38 +65,12 @@ public class PnlGradePlanificationController implements ActionListener, ItemList
         
         pendingPlans = gradingService.getPendingGrades(currentUser.getId());
         
-        // Debug: Mostrar información sobre las planificaciones
-        List<Planification> allPlans = FileManagerPlanification.getInstance().findPlanificationsByTeacher(currentUser.getId());
-        System.out.println("=== DEBUG CALIFICACIONES ===");
-        System.out.println("Usuario actual: " + currentUser.getId() + " (" + currentUser.getRol() + ")");
-        System.out.println("Total planificaciones del maestro: " + allPlans.size());
-        System.out.println("Planificaciones pendientes de calificar: " + pendingPlans.size());
-        
-        for (int i = 0; i < Math.min(5, allPlans.size()); i++) {
-            Planification plan = allPlans.get(i);
-            System.out.println(String.format("Plan %d: %s - Calificada: %s (Nota: %d)", 
-                i+1, plan.getNamePlanification(), plan.isGraded(), plan.getGrade()));
-        }
-        System.out.println("==============================");
-        
         panel.getCmbPendingPlans().removeAllItems();
         panel.getCmbPendingPlans().addItem("Seleccione una planificación pendiente");
         
         if (pendingPlans.isEmpty()) {
             panel.getCmbPendingPlans().addItem("No hay planificaciones pendientes");
             panel.getBtnGrade().setEnabled(false);
-            
-            // DEBUG: Ofrecer resetear calificaciones si no hay pendientes
-            int option = JOptionPane.showConfirmDialog(panel, 
-                "No hay planificaciones pendientes. ¿Desea resetear todas las calificaciones para testing?", 
-                "Debug - Sin Planificaciones Pendientes", 
-                JOptionPane.YES_NO_OPTION);
-            
-            if (option == JOptionPane.YES_OPTION) {
-                FileManagerPlanification.getInstance().resetAllGradesToPending();
-                loadPendingPlanifications(); // Recargar después del reset
-                return;
-            }
         } else {
             for (Planification plan : pendingPlans) {
                 String displayText = String.format("%s - %s (Semana %d)", 

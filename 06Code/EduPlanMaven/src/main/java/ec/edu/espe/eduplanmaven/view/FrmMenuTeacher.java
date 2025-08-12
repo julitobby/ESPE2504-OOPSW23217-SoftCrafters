@@ -66,19 +66,18 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
                 .addGap(42, 42, 42)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(showTitleNameTeacher, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addComponent(showTitleNameTeacher, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtmLogout)
-                .addGap(16, 16, 16))
+                .addGap(113, 113, 113))
         );
         PmlTitleLayout.setVerticalGroup(
             PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PmlTitleLayout.createSequentialGroup()
                 .addContainerGap(8, Short.MAX_VALUE)
                 .addGroup(PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PmlTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1)
-                        .addComponent(showTitleNameTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(showTitleNameTeacher, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtmLogout, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -188,15 +187,15 @@ public class FrmMenuTeacher extends javax.swing.JFrame {
     private javax.swing.JButton BtmLogout;
     private javax.swing.JMenuItem MnuCreatePlan;
     private javax.swing.JMenuItem MnuFindPlan;
-    private javax.swing.JMenuItem MnuViewAllPlans;
     private javax.swing.JMenuItem MnuGradePlanification;
     private javax.swing.JMenuItem MnuMonthlyReports;
+    private javax.swing.JMenuItem MnuViewAllPlans;
     private javax.swing.JPanel PmlActions;
     private javax.swing.JPanel PmlTitle;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenuGrading;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuGrading;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel showTitleNameTeacher;
     // End of variables declaration//GEN-END:variables

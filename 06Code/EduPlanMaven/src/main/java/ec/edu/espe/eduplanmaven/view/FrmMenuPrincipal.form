@@ -19,26 +19,16 @@
                 <Property name="text" type="java.lang.String" value="Ver planificaciones por docente"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="MnuIdByPlan">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Buscar Planificaci&#xf3;n"/>
-              </Properties>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenuReporting">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Reportes y Análisis"/>
+            <Property name="text" type="java.lang.String" value="Reportes y An&#xe1;lisis"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="MnuMonthlyReportsDirector">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reportes Mensuales Globales"/>
-              </Properties>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="MnuTeacherPerformance">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Rendimiento por Docente"/>
               </Properties>
             </MenuItem>
           </SubComponents>
@@ -116,9 +106,9 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="showTitleNamePrincipal" min="-2" pref="232" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="BtmLogout" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

@@ -14,6 +14,9 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import org.bson.Document;
+import com.mongodb.client.FindIterable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FileManagerUser {
 
@@ -135,11 +138,7 @@ public class FileManagerUser {
             String storedPassword = userDoc.getString("password");
             String rol = userDoc.getString("rol");
 
-            System.out.println("✓ Usuario encontrado en BD:");
-            System.out.println("  - ID: " + userDoc.getString("id"));
-            System.out.println("  - Username: " + userDoc.getString("userName"));
-            System.out.println("  - Rol: " + userDoc.getString("rol"));
-            System.out.println("  - Nombre: " + userDoc.getString("firstName") + " " + userDoc.getString("lastName"));
+            
 
             if (storedPassword.equals(password)) {
                 JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso", "Bienvenido", JOptionPane.INFORMATION_MESSAGE);
@@ -236,6 +235,23 @@ public class FileManagerUser {
     // Método para limpiar la sesión
     public void logout() {
         currentLoggedUser = null;
+    }
+
+    // Nuevo: obtener todos los IDs de maestros disponibles en la BD
+    public List<String> getAllTeacherIds() {
+        List<String> ids = new ArrayList<>();
+        try {
+            Document filter = new Document("rol", "Maestro");
+            FindIterable<Document> docs = collection.find(filter);
+            for (Document d : docs) {
+                String id = d.getString("id");
+                if (id != null && !id.isBlank()) {
+                    ids.add(id);
+                }
+            }
+    } catch (Exception e) {
+    }
+        return ids;
     }
 
 }

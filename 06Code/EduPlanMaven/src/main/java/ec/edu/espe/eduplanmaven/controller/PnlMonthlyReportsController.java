@@ -4,6 +4,7 @@ import ec.edu.espe.eduplanmaven.model.MonthlyReport;
 import ec.edu.espe.eduplanmaven.model.Planification;
 import ec.edu.espe.eduplanmaven.model.User;
 import ec.edu.espe.eduplanmaven.util.FileManagerUser;
+import ec.edu.espe.eduplanmaven.util.FileManagerPlanification;
 import ec.edu.espe.eduplanmaven.util.GradingService;
 import ec.edu.espe.eduplanmaven.view.PnlMonthlyReports;
 import javax.swing.*;
@@ -64,33 +65,19 @@ public class PnlMonthlyReportsController implements ActionListener {
         int year = Integer.parseInt((String) panel.getCmbYear().getSelectedItem());
         int month = panel.getCmbMonth().getSelectedIndex() + 1;
         
-        String teacherId;
         if ("Director".equalsIgnoreCase(currentUser.getRol())) {
-            // For directors, show a dialog to select teacher or all teachers
-            String[] options = {"Todos los maestros", "Seleccionar maestro específico"};
-            int choice = JOptionPane.showOptionDialog(panel, 
-                "¿Qué reporte desea generar?", 
-                "Seleccionar Alcance", 
-                JOptionPane.YES_NO_OPTION, 
-                JOptionPane.QUESTION_MESSAGE, 
-                null, options, options[0]);
-            
-            if (choice == 0) {
-                // TODO: Implement all teachers report
-                JOptionPane.showMessageDialog(panel, "Funcionalidad de todos los maestros pendiente de implementar", 
-                                            "En desarrollo", JOptionPane.INFORMATION_MESSAGE);
-                return;
-            } else {
-                // TODO: Implement teacher selection dialog
-                JOptionPane.showMessageDialog(panel, "Selección de maestro específico pendiente de implementar", 
-                                            "En desarrollo", JOptionPane.INFORMATION_MESSAGE);
-                return;
+            java.util.List<Planification> all = FileManagerPlanification.getInstance().getAllPlanifications();
+            java.util.List<Planification> filtered = new java.util.ArrayList<>();
+            for (Planification p : all) {
+                if (p.getMonth() == month && p.getYear() == year) {
+                    filtered.add(p);
+                }
             }
-        } else {
-            teacherId = currentUser.getId();
+            MonthlyReport report = new MonthlyReport(month, year, "ALL", filtered);
+            displayReport(report);
+            return;
         }
-        
-        // Generate the report
+        String teacherId = currentUser.getId();
         MonthlyReport report = gradingService.generateMonthlyReport(teacherId, month, year);
         displayReport(report);
     }

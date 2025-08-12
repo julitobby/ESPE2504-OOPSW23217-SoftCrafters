@@ -9,12 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import javax.swing.table.DefaultTableModel;
-
-/**
- *
- * @author David Bonilla SoftCrafters ESPE
- */
 public class PnlViewPlansController implements ActionListener {
     
     private static PnlViewPlansController instance;
@@ -24,7 +20,7 @@ public class PnlViewPlansController implements ActionListener {
     private PnlViewPlansController() {
         this.pnlViewPlans = PnlViewPlans.getInstance();
         setupEventListeners();
-        loadPlanificationsByTeacher(); // Carga automática al inicializar
+    loadPlanificationsByTeacher();
     }
     
     public static PnlViewPlansController getInstance() {
@@ -35,17 +31,16 @@ public class PnlViewPlansController implements ActionListener {
     }
     
     private void setupTable() {
-        // Para PnlViewPlans: siempre es para mostrar planificaciones del maestro logueado
-        // Sin información de otros maestros (tabla simplificada)
         String[] columnNames = new String[]{"ID", "Nombre", "Nivel Educativo", "Fecha"};
         
         DefaultTableModel model = new DefaultTableModel(columnNames, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
-                return false; // Hacer la tabla de solo lectura
+                return false;
             }
         };
-        pnlViewPlans.getTblPlans().setModel(model);
+    pnlViewPlans.getTblPlans().setModel(model);
+    pnlViewPlans.getTblPlans().setAutoCreateRowSorter(true);
     }
     
     private void setupEventListeners() {
@@ -54,53 +49,49 @@ public class PnlViewPlansController implements ActionListener {
     }
     
     public void loadPlanificationsByTeacher() {
-        System.out.println("=== EJECUTANDO loadPlanificationsByTeacher ===");
         User currentUser = FileManagerUser.getInstance().getCurrentLoggedUser();
         
-        if (currentUser != null) {
-            System.out.println("🔍 Usuario logueado: " + currentUser.getUsername() + " (ID: '" + currentUser.getId() + "')");
-            
-            // Configurar la tabla 
+    if (currentUser != null) {
             setupTable();
-            
-            String currentTeacherId = currentUser.getId();
-            
-            // Obtener SOLO las planificaciones del maestro logueado
-            List<Planification> planifications = FileManagerPlanification.getInstance().findPlanificationsByTeacher(currentTeacherId);
-            
-            System.out.println("📊 Planificaciones encontradas para " + currentTeacherId + ": " + planifications.size());
-            
-            // Mostrar las planificaciones filtradas en la tabla
+            String currentTeacherId = currentUser.getId() != null ? currentUser.getId().trim() : "";
+            List<Planification> planifications = new ArrayList<>();
+            if (!currentTeacherId.isEmpty()) {
+                List<Planification> direct = FileManagerPlanification.getInstance().findPlanificationsByTeacher(currentTeacherId);
+                if (direct != null) {
+                    planifications.addAll(direct);
+                }
+                if (planifications.isEmpty()) {
+                    List<Planification> all = FileManagerPlanification.getInstance().getAllPlanifications();
+                    for (Planification p : all) {
+                        String tid = p.getIdTeacher() != null ? p.getIdTeacher().trim() : "";
+                        if (!tid.isEmpty() && tid.equals(currentTeacherId)) {
+                            planifications.add(p);
+                        }
+                    }
+                }
+            }
             populateTable(planifications);
-            
-            System.out.println("✅ Tabla actualizada con " + planifications.size() + " planificaciones");
         } else {
-            System.out.println("❌ ERROR: No hay usuario logueado");
-            // Limpiar la tabla si no hay usuario logueado
             DefaultTableModel model = (DefaultTableModel) pnlViewPlans.getTblPlans().getModel();
             model.setRowCount(0);
         }
-        System.out.println("=== FIN loadPlanificationsByTeacher ===");
     }
     
     public void loadPlanificationsByResults(List<Planification> planifications) {
         User currentUser = FileManagerUser.getInstance().getCurrentLoggedUser();
         
-        if (currentUser != null) {
-            // Configurar la tabla
+    if (currentUser != null) {
             setupTable();
-            
-            // PnlViewPlans SIEMPRE filtra por el maestro logueado
-            // No importa qué planificaciones reciba, solo muestra las del usuario actual
-            String currentTeacherId = currentUser.getId();
-            
+            String currentTeacherId = currentUser.getId() != null ? currentUser.getId().trim() : "";
             List<Planification> finalPlanifications = planifications.stream()
-                    .filter(plan -> plan.getIdTeacher().equals(currentTeacherId))
-                    .toList();
+                .filter(plan -> {
+                    String tid = plan.getIdTeacher() != null ? plan.getIdTeacher().trim() : "";
+                    return !tid.isEmpty() && tid.equals(currentTeacherId);
+                })
+                .collect(Collectors.toList());
             
             populateTable(finalPlanifications);
         } else {
-            // Limpiar la tabla si no hay usuario logueado
             DefaultTableModel model = (DefaultTableModel) pnlViewPlans.getTblPlans().getModel();
             model.setRowCount(0);
         }
@@ -108,9 +99,7 @@ public class PnlViewPlansController implements ActionListener {
     
     private void populateTable(List<Planification> planifications) {
         DefaultTableModel model = (DefaultTableModel) pnlViewPlans.getTblPlans().getModel();
-        model.setRowCount(0); // Limpiar tabla
-        
-        // PnlViewPlans siempre usa formato simplificado (sin información de maestro)
+    model.setRowCount(0);
         for (Planification plan : planifications) {
             Object[] row = new Object[]{
                 plan.getIdPlanification(),

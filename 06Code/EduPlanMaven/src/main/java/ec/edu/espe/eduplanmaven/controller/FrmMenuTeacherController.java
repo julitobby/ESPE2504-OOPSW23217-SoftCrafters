@@ -40,8 +40,8 @@ public class FrmMenuTeacherController implements ActionListener {
         frmMenuTeacher.getMnuFindPlan().setActionCommand("Find");
         frmMenuTeacher.getBtmLogout().addActionListener(this);
         frmMenuTeacher.getBtmLogout().setActionCommand("Logout");
-        frmMenuTeacher.getMnuViewAllPlans().addActionListener(this);
-        frmMenuTeacher.getMnuViewAllPlans().setActionCommand("ViewPlans");
+    frmMenuTeacher.getMnuViewAllPlans().addActionListener(this);
+    frmMenuTeacher.getMnuViewAllPlans().setActionCommand("ViewPlans");
         
         // Agregar listeners para nuevas funcionalidades de calificación
         frmMenuTeacher.getMnuGradePlanification().addActionListener(this);
@@ -49,11 +49,7 @@ public class FrmMenuTeacherController implements ActionListener {
         frmMenuTeacher.getMnuMonthlyReports().addActionListener(this);
         frmMenuTeacher.getMnuMonthlyReports().setActionCommand("MonthlyReports");
         
-        // Verificar si hay otro botón para ver todas las planificaciones
-        if (frmMenuTeacher.getMnuViewAllPlans() != null) {
-            frmMenuTeacher.getMnuViewAllPlans().addActionListener(this);
-            frmMenuTeacher.getMnuViewAllPlans().setActionCommand("ViewAllPlans");
-        }
+
         
         frmMenuTeacher.revalidate();
         frmMenuTeacher.repaint();
@@ -85,7 +81,6 @@ public class FrmMenuTeacherController implements ActionListener {
                 frmMenuTeacher.repaint();
                 frmMenuTeacher.pack();
                 PnlCreatePlanController.getInstance();
-                System.out.println("a");
 
             }
             case "Find" -> {
@@ -93,40 +88,35 @@ public class FrmMenuTeacherController implements ActionListener {
                 frmMenuTeacher.revalidate();
                 frmMenuTeacher.repaint();
                 frmMenuTeacher.pack();
-                PnlFindPlanController.getInstance(); // Inicializar controlador que carga automáticamente
-                System.out.println("b");
+                PnlFindPlanController.getInstance();
             }
             case "ViewPlans" -> {
                 cardLayout.show(frmMenuTeacher.getPmlActions(), "ViewPlans");
                 frmMenuTeacher.revalidate();
                 frmMenuTeacher.repaint();
                 frmMenuTeacher.pack();
-                PnlViewPlansController.getInstance(); // Inicializar controlador que carga automáticamente
-                System.out.println("c");
+                PnlViewPlansController.getInstance().loadPlanificationsByTeacher();
             }
             case "ViewAllPlans" -> {
                 cardLayout.show(frmMenuTeacher.getPmlActions(), "ViewAllPlans");
                 frmMenuTeacher.revalidate();
                 frmMenuTeacher.repaint();
                 frmMenuTeacher.pack();
-                PnlViewAllPlansController.getInstance(); // Inicializar controlador que carga automáticamente
-                System.out.println("d");
+                PnlViewAllPlansController.getInstance();
             }
             case "GradePlanification" -> {
                 cardLayout.show(frmMenuTeacher.getPmlActions(), "GradePlanification");
                 frmMenuTeacher.revalidate();
                 frmMenuTeacher.repaint();
                 frmMenuTeacher.pack();
-                PnlGradePlanificationController.getInstance(); // Inicializar controlador de calificaciones
-                System.out.println("e - Abriendo panel de calificaciones");
+                PnlGradePlanificationController.getInstance();
             }
             case "MonthlyReports" -> {
                 cardLayout.show(frmMenuTeacher.getPmlActions(), "MonthlyReports");
                 frmMenuTeacher.revalidate();
                 frmMenuTeacher.repaint();
                 frmMenuTeacher.pack();
-                PnlMonthlyReportsController.getInstance(); // Inicializar controlador de reportes
-                System.out.println("f - Abriendo panel de reportes mensuales");
+                PnlMonthlyReportsController.getInstance();
             }
             case "Logout" -> {
                 FileManagerUser.getInstance().logout(); // Limpiar la sesión
