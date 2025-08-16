@@ -1,0 +1,13 @@
+ec\edu\espe\eduplanmaven\util\EduPlanGradingSystemTest.class
+ec\edu\espe\eduplanmaven\util\AdvancedGradingSystemTest.class
+ec\edu\espe\eduplanmaven\util\AdvancedGradingSystemTest$DateTimeEdgeCases.class
+ec\edu\espe\eduplanmaven\util\EduPlanGradingSystemTest$IntegrationAndBusinessLogicTests.class
+ec\edu\espe\eduplanmaven\util\EduPlanGradingSystemTest$GradingServiceTests.class
+ec\edu\espe\eduplanmaven\util\AdvancedGradingSystemTest$StringEncodingTests.class
+ec\edu\espe\eduplanmaven\util\AdvancedGradingSystemTest$AlgorithmComplexityTests.class
+ec\edu\espe\eduplanmaven\util\EduPlanGradingSystemTest$MonthlyReportTests.class
+ec\edu\espe\eduplanmaven\util\GradingServiceTest.class
+ec\edu\espe\eduplanmaven\util\AdvancedGradingSystemTest$ConcurrencyTests.class
+ec\edu\espe\eduplanmaven\util\AdvancedGradingSystemTest$MemoryAndPerformanceTests.class
+ec\edu\espe\eduplanmaven\util\EduPlanGradingSystemTest$EdgeCasesAndErrorHandling.class
+ec\edu\espe\eduplanmaven\util\EduPlanGradingSystemTest$PlanificationModelTests.class
